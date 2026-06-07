@@ -113,23 +113,23 @@ GitHub 저장소와 연결하거나 Cloudflare Pages의 Direct Upload로 프로�
 현재 배포 주소는 아래와 같습니다.
 
 ```text
-https://cu-ree.github.io/calculating-machine/
+https://costcheck.kr/
 ```
 
 Google Search Console 등록 순서:
 
 1. Google Search Console에 접속합니다.
-2. URL 접두어 방식으로 `https://cu-ree.github.io/calculating-machine/`을 등록합니다.
+2. URL 접두어 방식으로 `https://costcheck.kr/`을 등록합니다.
 3. 안내에 따라 소유권을 확인합니다.
-4. `Sitemaps` 메뉴에서 `https://cu-ree.github.io/calculating-machine/sitemap.xml`을 제출합니다.
+4. `Sitemaps` 메뉴에서 `https://costcheck.kr/sitemap.xml`을 제출합니다.
 5. 주요 계산기 URL이 색인 가능한지 URL 검사로 확인합니다.
 
 네이버 서치어드바이저 등록 순서:
 
 1. 네이버 서치어드바이저에 접속합니다.
-2. 사이트 관리에서 `https://cu-ree.github.io/calculating-machine/`을 추가합니다.
+2. 사이트 관리에서 `https://costcheck.kr/`을 추가합니다.
 3. 안내에 따라 사이트 소유권을 확인합니다.
-4. 사이트맵에 `https://cu-ree.github.io/calculating-machine/sitemap.xml`을 제출합니다.
+4. 사이트맵에 `https://costcheck.kr/sitemap.xml`을 제출합니다.
 5. 웹 페이지 수집 요청에서 주요 계산기 URL을 확인합니다.
 
 ## 현재 상태

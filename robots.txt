@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cu-ree.github.io/calculating-machine/sitemap.xml
+Sitemap: https://costcheck.kr/sitemap.xml
