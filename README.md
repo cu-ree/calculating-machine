@@ -1,14 +1,70 @@
 # 생활비 계산소
 
-생활비 계산소는 생활 결정 전에 비용을 숫자로 먼저 확인할 수 있도록 만든 정적 웹사이트입니다. 월세, 자취, 이사, 알바, 중고거래, 비상금, 데이트, 반려동물, 출산·육아 초기비용 계산기 페이지를 포함합니다.
+생활비 계산소는 이사, 월세, 자취, 알바, 중고거래, 비상금, 데이트, 반려동물, 출산·육아 비용을 미리 계산해볼 수 있는 정적 웹 계산기 모음입니다.
 
-## 현재 상태
+생활 속 중요한 결정을 하기 전에 대략적인 비용을 숫자로 확인하고, 결과를 차트·표·PDF 리포트로 정리할 수 있습니다.
 
-- 9개 계산기 UI와 실제 계산 로직이 연결되어 있습니다.
-- 입력값 변경 시 요약 카드, 차트, 표, 해석 문장, 복사, CSV 결과가 갱신됩니다.
-- 계산기 페이지에는 PDF 전용 `print-report` 출력 구조가 적용되어 있습니다.
-- 서버, DB, 로그인, 빌드 도구 없이 동작하는 정적 사이트입니다.
-- 실제 AdSense 코드는 삽입되어 있지 않으며, 광고 영역은 자리 표시용 안내 영역입니다.
+## 서비스 목적
+
+생활비 계산소는 큰돈이 들어가는 선택을 앞두고 “대략 어느 정도 비용이 필요할지”를 먼저 확인할 수 있도록 만든 계산 도구입니다.
+
+사용자가 직접 값을 입력하면 계산 결과를 요약 카드, 도넛 차트, 상세 표, 해석 문장으로 보여줍니다. 별도 회원가입이나 로그인 없이 바로 사용할 수 있으며, 입력한 금액 데이터는 서버에 저장하지 않습니다.
+
+계산 결과는 실제 견적, 세금, 시세, 병원비 등을 확정하는 값이 아니라 상황을 점검하기 위한 참고용입니다.
+
+## 제공 계산기
+
+| 계산기 | 설명 |
+|---|---|
+| 이사 견적 계산기 | 이사 유형, 거리, 짐 양, 작업 조건을 입력해 참고용 예상 이사비를 확인합니다. |
+| 월세 유지비 계산기 | 월세, 관리비, 공과금, 통신비 등을 합산해 월 주거 유지비를 계산합니다. |
+| 자취 생활비 계산기 | 월 수입과 지출을 입력해 총 생활비, 남는 금액, 생활비 비율을 확인합니다. |
+| 알바·부업 실수령 계산기 | 시급, 근무시간, 예상 공제, 교통비와 식비를 반영해 남는 금액을 추정합니다. |
+| 중고거래 적정가 계산기 | 구매가, 사용 기간, 상태, 직접 입력한 시세를 기준으로 참고 판매가를 계산합니다. |
+| 비상금 버티기 계산기 | 보유 비상금과 월 지출을 기준으로 버틸 수 있는 기간을 확인합니다. |
+| 데이트 비용 계산기 | 식사, 카페, 교통, 선물 등 데이트 관련 지출을 월 단위로 정리합니다. |
+| 반려동물 입양 비용 계산기 | 초기 용품비와 월 유지비를 나누어 입양 전 예상 비용을 확인합니다. |
+| 출산·육아 초기비용 계산기 | 출산 준비비와 첫해 반복 육아비를 나누어 참고용 초기 비용을 계산합니다. |
+
+## 주요 기능
+
+- 입력값 기반 즉시 계산
+- 결과 요약 카드
+- 항목별 도넛 차트
+- 상세 표
+- 한눈에 해석하기 문장
+- 결과 복사
+- CSV 다운로드
+- PDF 저장용 전용 리포트 출력
+- 모바일 반응형 화면
+- 개인정보 및 입력값 서버 저장 없음
+
+## 화면 구성
+
+- 메인 허브 페이지: 9개 계산기로 이동할 수 있는 첫 화면
+- 계산기 상세 페이지: 입력폼, 결과 요약, 차트, 상세 표, 해석 문장 제공
+- 결과 리포트 PDF: 입력폼과 광고 영역을 제외한 계산 결과 중심의 출력 화면
+- 안내 페이지: 소개, 가이드, FAQ, 문의, 이용 안내, 개인정보처리방침
+
+<!-- 추후 스크린샷 추가 예정 -->
+
+## 개인정보 및 데이터 처리
+
+생활비 계산소는 회원가입과 로그인을 제공하지 않습니다.
+
+계산기에 입력한 금액 데이터는 서버로 전송하거나 저장하지 않으며, 모든 계산은 사용자의 브라우저에서 처리됩니다. PDF 저장과 CSV 다운로드 역시 사용자의 브라우저에서 생성됩니다.
+
+계산 결과는 참고용입니다. 실제 비용, 견적, 세금, 시세, 병원비 등은 개인 상황과 조건에 따라 달라질 수 있습니다.
+
+## 기술 구성
+
+- 정적 HTML/CSS/JavaScript
+- 서버 없음
+- DB 없음
+- 외부 API 없음
+- Cloudflare Pages 배포 가능
+- `window.print()` 기반 PDF 저장
+- 브라우저 기반 CSV 생성
 
 ## 폴더 구조
 
@@ -17,31 +73,12 @@ calculating-machine/
   index.html
   pages/
     calculators/
-      living-alone-cost-calculator.html
-      moving-cost-calculator.html
-      rent-cost-calculator.html
-      part-time-income-calculator.html
-      used-item-price-calculator.html
-      emergency-fund-calculator.html
-      date-cost-calculator.html
-      pet-adoption-cost-calculator.html
-      baby-first-year-cost-calculator.html
-    policy/
-      privacy-policy.html
     info/
-      about.html
-      guide.html
-      faq.html
-      contact.html
-      usage-guide.html
+    policy/
   assets/
     css/
-      styles.css
-      calculator.css
     js/
-      calc-engine.js
     images/
-      .gitkeep
   robots.txt
   sitemap.xml
   README.md
@@ -49,106 +86,52 @@ calculating-machine/
 
 ## 로컬 실행 방법
 
-빌드 명령은 필요 없습니다.
+1. 저장소를 다운로드합니다.
+2. `index.html`을 브라우저로 엽니다.
+3. 또는 VS Code Live Server를 사용합니다.
 
-`index.html` 파일을 브라우저에서 직접 열거나, 정적 파일 서버로 루트 폴더를 열어 확인할 수 있습니다.
+정적 파일 서버로 확인하려면 아래 명령을 사용할 수 있습니다.
 
 ```bash
 python -m http.server 8000
 ```
 
-이후 `http://127.0.0.1:8000/`에서 확인합니다.
+## 배포 방법
 
-## Cloudflare Pages 배포 방법
-
-### Direct Upload
-
-1. Cloudflare Dashboard에서 Pages로 이동합니다.
-2. `Create a project`를 선택합니다.
-3. `Direct Upload`를 선택합니다.
-4. 이 프로젝트 루트 폴더의 파일을 그대로 업로드합니다.
-5. 별도 빌드 명령은 입력하지 않습니다.
-
-### GitHub 연동 배포
-
-1. 이 폴더 내용을 GitHub 저장소 루트에 업로드합니다.
-2. Cloudflare Pages에서 해당 저장소를 연결합니다.
-3. Framework preset은 `None` 또는 정적 사이트 기준으로 둡니다.
-4. Build command는 비워둡니다.
-5. Build output directory는 루트 기준 `.` 또는 `/`로 설정합니다.
-6. 배포 후 발급된 Pages URL에서 주요 페이지를 확인합니다.
-
-## 도메인 연결 전 교체 필요 위치
-
-현재 실제 도메인이 확정되지 않아 `https://example.com/` 값은 유지되어 있습니다. 실제 도메인이 정해지면 아래 파일을 교체하세요.
+Cloudflare Pages에 정적 사이트로 배포할 수 있습니다.
 
 ```text
-robots.txt
-  Sitemap: https://example.com/sitemap.xml
-
-sitemap.xml
-  https://example.com/
-  https://example.com/pages/calculators/living-alone-cost-calculator.html
-  https://example.com/pages/calculators/moving-cost-calculator.html
-  https://example.com/pages/calculators/rent-cost-calculator.html
-  https://example.com/pages/calculators/part-time-income-calculator.html
-  https://example.com/pages/calculators/used-item-price-calculator.html
-  https://example.com/pages/calculators/emergency-fund-calculator.html
-  https://example.com/pages/calculators/date-cost-calculator.html
-  https://example.com/pages/calculators/pet-adoption-cost-calculator.html
-  https://example.com/pages/calculators/baby-first-year-cost-calculator.html
-  https://example.com/pages/policy/privacy-policy.html
-  https://example.com/pages/info/about.html
-  https://example.com/pages/info/guide.html
-  https://example.com/pages/info/faq.html
-  https://example.com/pages/info/contact.html
-  https://example.com/pages/info/usage-guide.html
+Framework preset: None
+Build command: 비움
+Build output directory: .
 ```
 
-예를 들어 실제 도메인이 `https://living-cost.example`라면 위 `https://example.com`을 모두 실제 도메인으로 바꿉니다.
+GitHub 저장소와 연결하거나 Cloudflare Pages의 Direct Upload로 프로젝트 루트 폴더를 업로드하면 됩니다.
 
-## GitHub 업로드 전 제외 권장 파일
+## 도메인 연결 후 해야 할 일
 
-배포에는 아래 파일이 필요하지 않습니다. 저장소에 포함하지 마세요.
+실제 도메인이 정해지면 아래 항목을 교체하거나 등록합니다.
 
-```text
-.DS_Store
-Thumbs.db
-Desktop.ini
-*.tmp
-*.temp
-*.log
-*.pdf
-mobile-*.png
-*-simple.png
-node_modules/
-dist/
-build/
-.cache/
-.vite/
-__pycache__/
-.pytest_cache/
-.env
-.env.local
-```
+- `robots.txt`의 `https://example.com/` 교체
+- `sitemap.xml`의 `https://example.com/` 교체
+- Google Search Console 등록
+- 네이버 서치어드바이저 등록
 
-현재 루트 폴더 기준으로 배포에 필요한 파일은 `index.html`, `pages/`, `assets/`, `robots.txt`, `sitemap.xml`, `README.md`입니다.
+## 현재 상태
 
-## 배포 후 확인 체크리스트
+- [x] 9개 계산기 페이지
+- [x] 실제 계산 로직
+- [x] 입력값 변경 시 결과 갱신
+- [x] PDF 출력 전용 리포트
+- [x] CSV 다운로드
+- [x] 결과 복사
+- [x] 모바일 반응형
+- [x] 안내/FAQ/문의/개인정보처리방침 페이지
+- [x] robots.txt / sitemap.xml
+- [ ] 실제 도메인 연결
+- [ ] 검색 엔진 등록
+- [ ] AdSense 심사
 
-- 메인 페이지가 `/`에서 열리는지 확인합니다.
-- 9개 계산기 페이지가 모두 200 상태로 열리는지 확인합니다.
-- 계산기 입력값 변경 시 요약, 차트, 표, 해석 문장이 갱신되는지 확인합니다.
-- 결과 복사와 CSV 다운로드가 최신 결과를 사용하는지 확인합니다.
-- PDF 저장 시 입력폼, 헤더, 광고 영역, SEO 본문 없이 결과 리포트만 출력되는지 확인합니다.
-- 모바일 화면에서 입력, 결과, 차트, 표, 해석 순서가 자연스러운지 확인합니다.
-- 문의 페이지와 개인정보처리방침의 이메일이 `kr2000ljw@gmail.com`으로 보이는지 확인합니다.
-- `robots.txt`와 `sitemap.xml`이 배포 URL에서 열리는지 확인합니다.
-- 실제 도메인 연결 후 `sitemap.xml`과 `robots.txt`의 `https://example.com/`을 실제 도메인으로 교체했는지 확인합니다.
-- 브라우저 콘솔에 404 또는 JavaScript 오류가 없는지 확인합니다.
+## 문의
 
-## 참고 사항
-
-- 이 사이트는 정적 HTML/CSS/JavaScript만 사용합니다.
-- Cloudflare Pages 배포 시 별도의 Node, npm, Vite, React 설정은 필요하지 않습니다.
-- 아이콘은 외부 Lucide CDN을 사용합니다. CDN 접근이 차단된 환경에서는 아이콘만 표시되지 않을 수 있지만 계산 기능은 유지됩니다.
+문의: kr2000ljw@gmail.com
