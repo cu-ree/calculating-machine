@@ -3,8 +3,70 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>월세 유지비 계산기 — 생활비 계산소</title>
-<meta name="description" content="월세 외에 관리비, 공과금, 통신비, 주차비까지 포함해 실제 주거 유지비를 계산해보세요." />
+<title>월세 유지비 계산기 | 관리비·공과금 포함 실제 주거비 계산</title>
+<meta name="description" content="월세, 관리비, 전기·가스·수도요금, 통신비를 합산해 원룸 한 달 주거비와 자취 주거비를 참고용으로 계산합니다." />
+<link rel="canonical" href="https://cu-ree.github.io/calculating-machine/pages/calculators/rent-cost-calculator.html" />
+<meta property="og:title" content="월세 유지비 계산기 | 관리비·공과금 포함 실제 주거비 계산" />
+<meta property="og:description" content="월세, 관리비, 전기·가스·수도요금, 통신비를 합산해 원룸 한 달 주거비와 자취 주거비를 참고용으로 계산합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cu-ree.github.io/calculating-machine/pages/calculators/rent-cost-calculator.html" />
+<meta property="og:site_name" content="생활비 계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "월세 유지비 계산기",
+  "url": "https://cu-ree.github.io/calculating-machine/pages/calculators/rent-cost-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "월세, 관리비, 전기·가스·수도요금, 통신비를 합산해 원룸 한 달 주거비와 자취 주거비를 참고용으로 계산합니다.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "생활비 계산소"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "관리비에 공과금이 포함되어 있으면 어떻게 입력하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "관리비에 포함된 항목은 따로 중복 입력하지 않는 것이 좋습니다. 포함되지 않은 전기·가스·수도요금만 별도로 입력해주세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "통신비나 인터넷 요금도 넣어야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "주거 유지비로 함께 보고 싶다면 포함하는 것이 좋습니다. 순수 임대료만 보고 싶다면 제외해도 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "결과가 실제 청구 금액과 같나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 계절, 사용량, 관리비 항목에 따라 달라질 수 있는 참고용 계산 결과입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월세 관리비 계산기나 공과금 포함 월세 계산으로 사용할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 월세와 관리비, 전기·가스·수도 같은 공과금을 함께 넣어 원룸 한 달 주거비와 자취 주거비를 참고용으로 계산할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="../../assets/css/styles.css" />
 <link rel="stylesheet" href="../../assets/css/calculator.css" />
 </head>
@@ -67,9 +129,8 @@
     <div class="card csec faq">
       <h3><span class="n">5</span> 자주 묻는 질문</h3>
       <details open><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송하거나 저장하지 않습니다.</div></details>
-      <details><summary><span class="q">Q</span> 전세는 계산할 수 없나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">이 계산기는 월세 기준입니다. 전세 대출 이자를 월 단위로 환산해 월세 칸에 입력하면 비슷하게 활용할 수 있어요.</div></details>
-      <details><summary><span class="q">Q</span> 보증금은 왜 빠져 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">보증금은 매달 나가는 비용이 아니라 예치금이라 월 유지비 계산에서는 제외했습니다.</div></details>
-    </div>
+
+      <details><summary><span class="q">Q</span> 월세 관리비 계산기나 공과금 포함 월세 계산으로 사용할 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">네. 월세와 관리비, 전기·가스·수도 같은 공과금을 함께 넣어 원룸 한 달 주거비와 자취 주거비를 참고용으로 계산할 수 있습니다.</div></details>    </div>
 
     <div class="card csec">
       <h3><span class="n">6</span> 주의사항</h3>

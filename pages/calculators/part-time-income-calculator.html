@@ -3,8 +3,70 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>알바·부업 실수령 계산기 — 생활비 계산소</title>
-<meta name="description" content="시급, 근무시간, 예상 공제, 교통비와 식비를 반영해 비용 제외 후 남는 금액을 참고해보세요." />
+<title>알바·부업 실수령 계산기 | 시급·근무시간·공제액 기준 수입 계산</title>
+<meta name="description" content="시급, 근무시간, 3.3% 공제 예상, 4대보험 단순추정, 교통비와 식비를 반영해 알바·부업 수입을 참고용으로 계산합니다." />
+<link rel="canonical" href="https://cu-ree.github.io/calculating-machine/pages/calculators/part-time-income-calculator.html" />
+<meta property="og:title" content="알바·부업 실수령 계산기 | 시급·근무시간·공제액 기준 수입 계산" />
+<meta property="og:description" content="시급, 근무시간, 3.3% 공제 예상, 4대보험 단순추정, 교통비와 식비를 반영해 알바·부업 수입을 참고용으로 계산합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cu-ree.github.io/calculating-machine/pages/calculators/part-time-income-calculator.html" />
+<meta property="og:site_name" content="생활비 계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "알바·부업 실수령 계산기",
+  "url": "https://cu-ree.github.io/calculating-machine/pages/calculators/part-time-income-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "시급, 근무시간, 3.3% 공제 예상, 4대보험 단순추정, 교통비와 식비를 반영해 알바·부업 수입을 참고용으로 계산합니다.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "생활비 계산소"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "입력값이 저장되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "주휴수당도 포함되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이 계산기는 기본 시급 기준입니다. 주휴수당이 있다면 시급에 환산해 반영하거나 별도로 더해주세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월급제인데 사용할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "고정 월급이라면 시급 칸에 월 수입을 입력하고 근무시간 관련 값을 1로 두면 비슷하게 활용할 수 있어요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "시급 실수령 계산기나 알바 3.3% 계산기로 사용할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 시급과 근무시간, 3.3% 공제 예상 금액을 입력하면 교통비와 식비를 제외한 알바 실수령액이나 부업 수입을 참고로 계산할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="../../assets/css/styles.css" />
 <link rel="stylesheet" href="../../assets/css/calculator.css" />
 </head>
@@ -55,7 +117,7 @@
       <ul class="bullets">
         <li>근로계약 형태와 근무시간에 따라 4대보험 가입 여부가 달라집니다.</li>
         <li>가입 시 국민연금·건강보험 등이 공제되어 실수령액이 줄어듭니다.</li>
-        <li>대신 산재·실업급여 등 보장을 받을 수 있다는 장점이 있습니다.</li>
+        <li>대신 산재·실업급여 등 사회보험 관련 도움을 받을 수 있다는 장점이 있습니다.</li>
       </ul>
     </div>
 
@@ -67,9 +129,8 @@
     <div class="card csec faq">
       <h3><span class="n">5</span> 자주 묻는 질문</h3>
       <details open><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
-      <details><summary><span class="q">Q</span> 주휴수당도 포함되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">이 계산기는 기본 시급 기준입니다. 주휴수당이 있다면 시급에 환산해 반영하거나 별도로 더해주세요.</div></details>
-      <details><summary><span class="q">Q</span> 월급제인데 사용할 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">고정 월급이라면 시급 칸에 월 수입을 입력하고 근무시간 관련 값을 1로 두면 비슷하게 활용할 수 있어요.</div></details>
-    </div>
+
+      <details><summary><span class="q">Q</span> 시급 실수령 계산기나 알바 3.3% 계산기로 사용할 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">네. 시급과 근무시간, 3.3% 공제 예상 금액을 입력하면 교통비와 식비를 제외한 알바 실수령액이나 부업 수입을 참고로 계산할 수 있습니다.</div></details>    </div>
 
     <div class="card csec">
       <h3><span class="n">6</span> 주의사항</h3>

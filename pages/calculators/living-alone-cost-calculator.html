@@ -3,8 +3,70 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>자취 생활비 계산기 — 생활비 계산소</title>
-<meta name="description" content="월 수입과 지출을 입력하면 자취 생활비를 한눈에 확인할 수 있어요. 남는 금액, 생활비 비율, 저축 가능 금액을 계산해보세요." />
+<title>자취 생활비 계산기 | 월세·식비·교통비 포함 한 달 비용 계산</title>
+<meta name="description" content="월 수입, 월세, 식비, 교통비, 통신비를 입력해 자취 한달 생활비와 남는 금액, 생활비 비율을 참고용으로 확인합니다." />
+<link rel="canonical" href="https://cu-ree.github.io/calculating-machine/pages/calculators/living-alone-cost-calculator.html" />
+<meta property="og:title" content="자취 생활비 계산기 | 월세·식비·교통비 포함 한 달 비용 계산" />
+<meta property="og:description" content="월 수입, 월세, 식비, 교통비, 통신비를 입력해 자취 한달 생활비와 남는 금액, 생활비 비율을 참고용으로 확인합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cu-ree.github.io/calculating-machine/pages/calculators/living-alone-cost-calculator.html" />
+<meta property="og:site_name" content="생활비 계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "자취 생활비 계산기",
+  "url": "https://cu-ree.github.io/calculating-machine/pages/calculators/living-alone-cost-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "월 수입, 월세, 식비, 교통비, 통신비를 입력해 자취 한달 생활비와 남는 금액, 생활비 비율을 참고용으로 확인합니다.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "생활비 계산소"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "입력한 금액이 저장되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 모든 계산은 브라우저 안에서만 처리되며, 입력한 값은 서버로 전송하거나 저장하지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "연봉이나 주급으로도 계산할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이 계산기는 월 기준으로 동작합니다. 연봉은 12로, 주급은 약 4.3을 곱해 월 단위로 환산한 뒤 입력해주세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "비상금이나 목돈 지출은 어떻게 넣나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "비정기 지출은 1년치를 12로 나눠 월 평균으로 환산해 기타 생활비에 더하면 더 현실적인 결과를 얻을 수 있어요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월급 200 또는 월급 250으로 자취 가능 여부를 볼 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월 수입에 200만 원이나 250만 원을 넣고 월세, 식비, 교통비를 입력하면 자취 한달 생활비와 남는 금액을 참고용으로 확인할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="../../assets/css/styles.css" />
 <link rel="stylesheet" href="../../assets/css/calculator.css" />
 </head>
@@ -204,7 +266,7 @@
 
     <div class="card csec">
       <h3><span class="n">4</span> 결과 해석 방법</h3>
-      <p>생활비 비율이 낮을수록 저축이나 비상금 마련의 여유가 큰 편입니다. 일반적으로 비율이 70%를 넘기면 고정비를 점검해볼 시점으로 볼 수 있어요. 다만 개인의 상황과 목표에 따라 적정 비율은 달라질 수 있으니, 결과는 확정된 판단이 아닌 참고 지표로 활용하세요.</p>
+      <p>생활비 비율이 낮을수록 저축이나 비상금 마련의 여유가 큰 편입니다. 일반적으로 비율이 70%를 넘기면 고정비를 점검해볼 시점으로 볼 수 있어요. 다만 개인의 상황과 목표에 따라 적정 비율은 달라질 수 있으니, 결과는 최종 판단이 아닌 참고 지표로 활용하세요.</p>
     </div>
 
     <div class="card csec">
@@ -235,7 +297,8 @@
         <summary><span class="q">Q</span> 비상금이나 목돈 지출은 어떻게 넣나요? <span class="chev"><svg data-lucide="chevron-down"></svg></span></summary>
         <div class="a">비정기 지출은 1년치를 12로 나눠 월 평균으로 환산해 기타 생활비에 더하면 더 현실적인 결과를 얻을 수 있어요.</div>
       </details>
-    </div>
+
+      <details><summary><span class="q">Q</span> 월급 200 또는 월급 250으로 자취 가능 여부를 볼 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">월 수입에 200만 원이나 250만 원을 넣고 월세, 식비, 교통비를 입력하면 자취 한달 생활비와 남는 금액을 참고용으로 확인할 수 있습니다.</div></details>    </div>
 
     <div class="card csec">
       <h3><span class="n">8</span> 관련 계산기</h3>

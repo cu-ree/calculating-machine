@@ -3,8 +3,70 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>비상금 버티기 계산기 — 생활비 계산소</title>
-<meta name="description" content="현재 가진 돈과 월 지출을 입력해 몇 개월 동안 버틸 수 있는지 확인해보세요." />
+<title>비상금 버티기 계산기 | 현재 돈으로 몇 개월 버틸 수 있을까</title>
+<meta name="description" content="보유 현금과 월 생활비, 예상 수입을 입력해 현재 돈으로 몇 개월 버틸 수 있는지 참고용으로 계산합니다." />
+<link rel="canonical" href="https://cu-ree.github.io/calculating-machine/pages/calculators/emergency-fund-calculator.html" />
+<meta property="og:title" content="비상금 버티기 계산기 | 현재 돈으로 몇 개월 버틸 수 있을까" />
+<meta property="og:description" content="보유 현금과 월 생활비, 예상 수입을 입력해 현재 돈으로 몇 개월 버틸 수 있는지 참고용으로 계산합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cu-ree.github.io/calculating-machine/pages/calculators/emergency-fund-calculator.html" />
+<meta property="og:site_name" content="생활비 계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "비상금 버티기 계산기",
+  "url": "https://cu-ree.github.io/calculating-machine/pages/calculators/emergency-fund-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "보유 현금과 월 생활비, 예상 수입을 입력해 현재 돈으로 몇 개월 버틸 수 있는지 참고용으로 계산합니다.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "생활비 계산소"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "입력한 금액은 저장되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 모든 계산은 브라우저에서만 처리되며 저장되지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "예상 수입이 없으면 어떻게 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월 예상 수입을 0원으로 입력하면 현재 비상금만으로 버틸 수 있는 기간을 계산할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "카드값이나 대출 상환액도 넣어야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "매달 반드시 나가는 지출이라면 월 생활비에 포함하는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "퇴사 전 비상금 계산이나 무직 생활비 계산에 사용할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 예상 수입을 0원으로 두면 생활비 버티기 계산기로 활용할 수 있고 현재 돈으로 몇 개월 버틸 수 있을지 참고할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
 <link rel="stylesheet" href="../../assets/css/styles.css" />
 <link rel="stylesheet" href="../../assets/css/calculator.css" />
 </head>
@@ -71,9 +133,8 @@
     <div class="card csec faq">
       <h3><span class="n">5</span> 자주 묻는 질문</h3>
       <details open><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 이루어지며 저장되지 않습니다.</div></details>
-      <details><summary><span class="q">Q</span> 예상 수입이 없으면 0으로 두나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">네. 수입이 없다고 가정하려면 0으로 두면 됩니다. 최소한의 비정기 수입만 반영해도 좋습니다.</div></details>
-      <details><summary><span class="q">Q</span> 버티는 기간은 어떻게 계산되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">보유 현금을 월 순지출(지출 − 수입)로 나눈 값을 기준으로 보여줍니다.</div></details>
-    </div>
+
+      <details><summary><span class="q">Q</span> 퇴사 전 비상금 계산이나 무직 생활비 계산에 사용할 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">네. 예상 수입을 0원으로 두면 생활비 버티기 계산기로 활용할 수 있고 현재 돈으로 몇 개월 버틸 수 있을지 참고할 수 있습니다.</div></details>    </div>
 
     <div class="card csec">
       <h3><span class="n">6</span> 주의사항</h3>

@@ -10,7 +10,7 @@
 
 사용자가 직접 값을 입력하면 계산 결과를 요약 카드, 도넛 차트, 상세 표, 해석 문장으로 보여줍니다. 별도 회원가입이나 로그인 없이 바로 사용할 수 있으며, 입력한 금액 데이터는 서버에 저장하지 않습니다.
 
-계산 결과는 실제 견적, 세금, 시세, 병원비 등을 확정하는 값이 아니라 상황을 점검하기 위한 참고용입니다.
+계산 결과는 견적서, 세금 신고, 시세 조회, 병원 상담을 대체하는 값이 아니라 상황을 점검하기 위한 참고용입니다.
 
 ## 제공 계산기
 
@@ -108,14 +108,29 @@ Build output directory: .
 
 GitHub 저장소와 연결하거나 Cloudflare Pages의 Direct Upload로 프로젝트 루트 폴더를 업로드하면 됩니다.
 
-## 도메인 연결 후 해야 할 일
+## 검색 엔진 등록 안내
 
-실제 도메인이 정해지면 아래 항목을 교체하거나 등록합니다.
+현재 배포 주소는 아래와 같습니다.
 
-- `robots.txt`의 `https://example.com/` 교체
-- `sitemap.xml`의 `https://example.com/` 교체
-- Google Search Console 등록
-- 네이버 서치어드바이저 등록
+```text
+https://cu-ree.github.io/calculating-machine/
+```
+
+Google Search Console 등록 순서:
+
+1. Google Search Console에 접속합니다.
+2. URL 접두어 방식으로 `https://cu-ree.github.io/calculating-machine/`을 등록합니다.
+3. 안내에 따라 소유권을 확인합니다.
+4. `Sitemaps` 메뉴에서 `https://cu-ree.github.io/calculating-machine/sitemap.xml`을 제출합니다.
+5. 주요 계산기 URL이 색인 가능한지 URL 검사로 확인합니다.
+
+네이버 서치어드바이저 등록 순서:
+
+1. 네이버 서치어드바이저에 접속합니다.
+2. 사이트 관리에서 `https://cu-ree.github.io/calculating-machine/`을 추가합니다.
+3. 안내에 따라 사이트 소유권을 확인합니다.
+4. 사이트맵에 `https://cu-ree.github.io/calculating-machine/sitemap.xml`을 제출합니다.
+5. 웹 페이지 수집 요청에서 주요 계산기 URL을 확인합니다.
 
 ## 현재 상태
 
@@ -128,8 +143,9 @@ GitHub 저장소와 연결하거나 Cloudflare Pages의 Direct Upload로 프로�
 - [x] 모바일 반응형
 - [x] 안내/FAQ/문의/개인정보처리방침 페이지
 - [x] robots.txt / sitemap.xml
-- [ ] 실제 도메인 연결
-- [ ] 검색 엔진 등록
+- [x] GitHub Pages 배포 주소 반영
+- [ ] Google Search Console 등록
+- [ ] 네이버 서치어드바이저 등록
 - [ ] AdSense 심사
 
 ## 문의
