@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>이용 안내 - 생활비 계산소</title>
+<meta name="description" content="생활비 계산소 이용 안내, 입력값 저장 여부, 외부 API 사용 여부, 책임 제한 안내입니다." />
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<style>
+.usage-page { padding: 34px 0 58px; }
+.usage-head { margin-bottom: 26px; }
+.usage-head .eyebrow { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.usage-head h1 { margin-top: 8px; font-size: clamp(27px, 3.2vw, 36px); font-weight: 800; }
+.usage-head p { margin-top: 12px; color: var(--ink-soft); max-width: 68ch; line-height: 1.7; }
+.usage-list { display: flex; flex-direction: column; gap: 14px; }
+.usage-item { padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); }
+.usage-item h2 { font-size: 18px; margin-bottom: 8px; }
+.usage-item p { color: var(--ink-soft); line-height: 1.7; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+    <nav class="nav">
+      <a href="../../index.html#calculators">계산기</a>
+      <a href="guide.html">가이드</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap usage-page">
+  <div class="usage-head">
+    <div class="eyebrow">USAGE</div>
+    <h1>이용 안내</h1>
+    <p>생활비 계산소를 이용하기 전에 확인할 기본 정책과 책임 제한 안내입니다.</p>
+  </div>
+  <div class="usage-list">
+    <section class="usage-item"><h2>계산 결과는 참고용입니다</h2><p>계산 결과는 입력값과 페이지의 단순 기준에 따른 참고용 정보이며, 실제 계약 조건이나 지출 금액을 보장하지 않습니다.</p></section>
+    <section class="usage-item"><h2>외부 API/실시간 조회 없음</h2><p>현재 계산기는 외부 API나 실시간 가격 조회 기능을 사용하지 않습니다.</p></section>
+    <section class="usage-item"><h2>입력값 서버 저장 없음</h2><p>사용자가 입력한 값은 서버에 저장하지 않으며, 브라우저 안에서 계산에만 사용됩니다.</p></section>
+    <section class="usage-item"><h2>광고와 기능 버튼 분리</h2><p>광고 영역은 계산, 복사, PDF 저장, CSV 다운로드 같은 기능 버튼과 분리된 별도 영역으로 운영됩니다.</p></section>
+    <section class="usage-item"><h2>책임 제한/면책 안내</h2><p>서비스 제공자는 계산 결과를 바탕으로 한 의사결정의 결과에 대해 책임을 지지 않습니다. 중요한 결정 전에는 실제 비용과 최신 조건을 별도로 확인해주세요.</p></section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a><p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p></div>
+      <nav class="foot-links"><a href="about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="usage-guide.html">이용 안내</a><a href="contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 생활비 계산소. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

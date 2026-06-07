@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>소개 - 생활비 계산소</title>
+<meta name="description" content="생활비 계산소는 생활 결정 전에 비용을 미리 확인할 수 있는 정적 계산기 모음입니다." />
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<style>
+.info-page { padding: 34px 0 58px; }
+.info-head { margin-bottom: 26px; }
+.info-head .eyebrow { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.info-head h1 { margin-top: 8px; font-size: clamp(27px, 3.2vw, 36px); font-weight: 800; }
+.info-head p { margin-top: 12px; max-width: 68ch; color: var(--ink-soft); font-size: 15.5px; line-height: 1.7; }
+.info-section { padding: 26px 0; border-top: 1px solid var(--line); }
+.info-section h2 { font-size: 21px; margin-bottom: 12px; }
+.info-section p { color: var(--ink-soft); line-height: 1.75; }
+.info-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.info-list li { padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink-soft); font-weight: 600; }
+.notice-list { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.notice-list li { position: relative; padding-left: 18px; color: var(--ink-soft); line-height: 1.65; }
+.notice-list li::before { content:""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 2px; background: var(--blue); }
+.info-actions { margin-top: 22px; }
+@media (max-width: 760px) { .info-list { grid-template-columns: 1fr; } .info-page { padding-top: 24px; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+    <nav class="nav">
+      <a href="../../index.html#calculators">계산기</a>
+      <a href="guide.html">가이드</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap info-page">
+  <div class="info-head">
+    <div class="eyebrow">ABOUT</div>
+    <h1>생활비 계산소 소개</h1>
+    <p>생활비 계산소는 자취, 월세, 이사, 알바, 중고거래처럼 생활에서 자주 마주치는 비용 판단을 숫자로 먼저 확인할 수 있도록 만든 정적 웹사이트입니다.</p>
+  </div>
+
+  <section class="info-section">
+    <h2>9개 계산기 제공</h2>
+    <p>현재 생활비 계산소는 생활비와 주거비, 일상 지출, 초기 준비 비용을 확인할 수 있는 9개의 계산기 페이지를 제공합니다.</p>
+    <ul class="info-list">
+      <li>자취 생활비 계산기</li>
+      <li>이사 비용 계산기</li>
+      <li>월세 유지비 계산기</li>
+      <li>알바·부업 실수령 계산기</li>
+      <li>중고거래 적정가 계산기</li>
+      <li>비상금 버티기 계산기</li>
+      <li>데이트 비용 계산기</li>
+      <li>반려동물 입양 비용 계산기</li>
+      <li>출산·육아 초기비용 계산기</li>
+    </ul>
+  </section>
+
+  <section class="info-section">
+    <h2>입력값 처리 방식</h2>
+    <ul class="notice-list">
+      <li>계산기에 입력한 값은 서버에 저장하지 않습니다.</li>
+      <li>계산은 사용자의 브라우저 안에서 처리됩니다.</li>
+      <li>계산 결과는 생활비 판단을 돕기 위한 참고용 정보입니다.</li>
+    </ul>
+    <div class="info-actions">
+      <a class="btn btn-primary btn-lg" href="../../index.html#calculators">계산기 바로가기 <svg data-lucide="arrow-right"></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+        <p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links">
+        <a href="about.html">소개</a>
+        <a href="../policy/privacy-policy.html">개인정보처리방침</a>
+        <a href="usage-guide.html">이용 안내</a>
+        <a href="contact.html">문의하기</a>
+      </nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 생활비 계산소. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

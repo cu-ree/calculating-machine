@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FAQ - 생활비 계산소</title>
+<meta name="description" content="생활비 계산소 입력값 저장 여부, 계산 결과 참고 범위, PDF와 CSV 사용 방법에 대한 자주 묻는 질문입니다." />
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<style>
+.faq-page { padding: 34px 0 58px; }
+.faq-head { margin-bottom: 26px; }
+.faq-head .eyebrow { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.faq-head h1 { margin-top: 8px; font-size: clamp(27px, 3.2vw, 36px); font-weight: 800; }
+.faq-head p { margin-top: 12px; color: var(--ink-soft); max-width: 68ch; line-height: 1.7; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-list details { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); overflow: hidden; }
+.faq-list summary { cursor: pointer; padding: 17px 20px; font-weight: 700; color: var(--navy-deep); list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list details p { padding: 0 20px 18px; color: var(--ink-soft); line-height: 1.7; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+    <nav class="nav">
+      <a href="../../index.html#calculators">계산기</a>
+      <a href="guide.html">가이드</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="contact.html">문의하기</a>
+    </nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap faq-page">
+  <div class="faq-head">
+    <div class="eyebrow">FAQ</div>
+    <h1>자주 묻는 질문</h1>
+    <p>생활비 계산소 사용 전에 자주 확인하는 항목을 정리했습니다.</p>
+  </div>
+  <div class="faq-list">
+    <details open><summary>입력값은 저장되나요?</summary><p>아니요. 입력값은 서버에 저장하지 않으며, 계산은 브라우저 안에서 처리됩니다.</p></details>
+    <details><summary>계산 결과는 어떻게 참고하면 되나요?</summary><p>계산 결과는 입력값과 페이지에 표시된 단순 기준에 따른 참고용 결과입니다. 실제 비용, 계약 조건, 지역 상황에 따라 달라질 수 있습니다.</p></details>
+    <details><summary>모바일에서도 사용할 수 있나요?</summary><p>네. 모바일 화면에서도 사용할 수 있도록 반응형 레이아웃을 적용했습니다.</p></details>
+    <details><summary>PDF 저장은 어떻게 하나요?</summary><p>계산 결과 영역의 PDF 저장 버튼을 누르면 브라우저 인쇄 화면이 열립니다. 인쇄 옵션에서 PDF 저장을 선택하면 됩니다.</p></details>
+    <details><summary>CSV 파일은 어떻게 사용하나요?</summary><p>CSV 다운로드 버튼으로 내려받은 파일은 스프레드시트 프로그램에서 열어 항목별 금액을 다시 확인할 수 있습니다.</p></details>
+    <details><summary>광고 영역은 어떤 역할인가요?</summary><p>광고 영역은 기능 버튼과 분리된 별도 영역입니다. 실제 광고 코드는 아직 삽입하지 않았습니다.</p></details>
+    <details><summary>계산 결과를 그대로 의사결정에 사용해도 되나요?</summary><p>계산 결과는 참고용입니다. 실제 계약, 구매, 지출 결정 전에는 최신 조건과 실제 비용을 다시 확인해야 합니다.</p></details>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a><p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p></div>
+      <nav class="foot-links"><a href="about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="usage-guide.html">이용 안내</a><a href="contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 생활비 계산소. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

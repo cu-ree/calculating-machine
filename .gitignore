@@ -1,0 +1,27 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Local QA outputs
+*.pdf
+mobile-*.png
+*-simple.png
+
+# Dependency/build/cache directories
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+__pycache__/
+.pytest_cache/
+
+# Local environment files
+.env
+.env.local

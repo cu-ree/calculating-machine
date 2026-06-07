@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>문의하기 - 생활비 계산소</title>
+<meta name="description" content="생활비 계산소 오류 제보, 계산기 추가 제안, 광고 및 제휴 문의 안내입니다." />
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<style>
+.contact-page { padding: 34px 0 58px; }
+.contact-head { margin-bottom: 26px; }
+.contact-head .eyebrow { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.contact-head h1 { margin-top: 8px; font-size: clamp(27px, 3.2vw, 36px); font-weight: 800; }
+.contact-head p { margin-top: 12px; color: var(--ink-soft); max-width: 68ch; line-height: 1.7; }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 22px; }
+.contact-item { padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); }
+.contact-item h2 { font-size: 18px; margin-bottom: 8px; }
+.contact-item p { color: var(--ink-soft); line-height: 1.7; }
+.mail-box { padding: 22px 24px; border-radius: var(--r-lg); background: var(--blue-soft); border: 1px solid #d7e4fd; }
+.mail-box p { color: var(--ink-soft); margin-bottom: 14px; }
+@media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } .contact-page { padding-top: 24px; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+    <nav class="nav">
+      <a href="../../index.html#calculators">계산기</a>
+      <a href="guide.html">가이드</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="active">문의하기</a>
+    </nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap contact-page">
+  <div class="contact-head">
+    <div class="eyebrow">CONTACT</div>
+    <h1>문의하기</h1>
+    <p>오류 제보, 계산기 추가 제안, 광고와 제휴 관련 문의를 이메일로 받을 수 있도록 기본 안내를 준비했습니다.</p>
+  </div>
+  <div class="contact-grid">
+    <section class="contact-item"><h2>문의 안내</h2><p>서비스 이용 중 확인이 필요한 내용이 있다면 이메일로 문의해주세요.</p></section>
+    <section class="contact-item"><h2>오류 제보</h2><p>계산 결과, 링크, 화면 표시 오류를 발견하면 페이지 이름과 상황을 함께 알려주세요.</p></section>
+    <section class="contact-item"><h2>계산기 추가 제안</h2><p>생활비와 관련해 추가되면 좋은 계산기 주제가 있다면 제안할 수 있습니다.</p></section>
+    <section class="contact-item"><h2>광고/제휴 문의</h2><p>광고나 제휴 문의는 별도 검토가 필요하며, 실제 광고 코드는 아직 삽입하지 않았습니다.</p></section>
+  </div>
+  <div class="mail-box">
+    <p>문의 이메일: <a href="mailto:kr2000ljw@gmail.com">kr2000ljw@gmail.com</a></p>
+    <a class="btn btn-primary" href="mailto:kr2000ljw@gmail.com">이메일 보내기 <svg data-lucide="mail"></svg></a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a><p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p></div>
+      <nav class="foot-links"><a href="about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="usage-guide.html">이용 안내</a><a href="contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 생활비 계산소. All rights reserved.</span></div>
+  </div>
+</footer>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

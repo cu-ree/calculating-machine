@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>생활비 계산소 — 생활 결정 전에 숫자로 먼저 확인하는 계산기 모음</title>
+<meta name="description" content="월세, 자취, 알바, 이사, 중고거래, 반려동물, 육아 비용까지. 생활에 꼭 필요한 9가지 계산기를 무료로 사용해보세요." />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<style>
+/* ---------- Hero ---------- */
+.hero { background: var(--bg-warm); border-bottom: 1px solid var(--line); }
+.hero .wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  padding-top: 72px; padding-bottom: 84px;
+}
+.hero h1 {
+  font-size: clamp(34px, 4.4vw, 50px); font-weight: 800; line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+.hero h1 .accent { color: var(--blue); }
+.hero .sub { margin-top: 20px; color: var(--ink-soft); font-size: 17px; max-width: 30ch; line-height: 1.6; }
+.hero .cta-row { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; }
+.trust { margin-top: 26px; display: flex; gap: 22px; flex-wrap: wrap; }
+.trust span { display: flex; align-items: center; gap: 7px; font-size: 13.5px; color: var(--ink-faint); font-weight: 500; }
+.trust svg { width: 15px; height: 15px; color: var(--green); }
+
+/* ---------- Hero illustration (CSS only) ---------- */
+.hero-art { position: relative; height: 340px; }
+.art-calc {
+  position: absolute; right: 34px; top: 28px; width: 210px;
+  background: #fff; border: 1px solid var(--line); border-radius: 20px;
+  padding: 16px; box-shadow: var(--shadow-lg); transform: rotate(-3deg);
+}
+.art-calc .disp {
+  background: var(--navy-deep); color: #eaf0ff; border-radius: 11px;
+  padding: 12px 14px; text-align: right; font-size: 20px; font-weight: 700;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+}
+.art-calc .keys { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; margin-top: 12px; }
+.art-calc .keys i { height: 26px; border-radius: 7px; background: var(--surface-2); display: block; }
+.art-calc .keys i.op { background: var(--blue-soft); }
+.art-calc .keys i.eq { background: var(--navy); grid-row: span 2; height: auto; }
+
+.art-donut {
+  position: absolute; left: 8px; top: 6px; width: 92px; height: 92px; border-radius: 50%;
+  background: conic-gradient(var(--c1) 0 38%, var(--c2) 38% 62%, var(--c5) 62% 82%, var(--c4) 82% 100%);
+  box-shadow: var(--shadow); }
+.art-donut::after { content:""; position: absolute; inset: 26px; border-radius: 50%; background: #fff; }
+
+.art-bars {
+  position: absolute; left: 0; bottom: 4px; width: 170px; height: 118px;
+  background: #fff; border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: var(--shadow); padding: 16px 18px; display: flex; align-items: flex-end; gap: 12px;
+}
+.art-bars b { flex: 1; border-radius: 6px 6px 0 0; display: block; }
+.art-bars b:nth-child(1){ height: 42%; background: var(--c2); }
+.art-bars b:nth-child(2){ height: 70%; background: var(--c1); }
+.art-bars b:nth-child(3){ height: 54%; background: var(--c3); }
+.art-bars b:nth-child(4){ height: 88%; background: var(--c5); }
+
+.coin {
+  position: absolute; border-radius: 50%; background: linear-gradient(160deg,#f3c969,#e0a13a);
+  box-shadow: var(--shadow); border: 3px solid #f7d784;
+}
+.coin.c-a { width: 46px; height: 46px; right: 14px; bottom: 56px; }
+.coin.c-b { width: 32px; height: 32px; right: 64px; bottom: 18px; opacity: .92; }
+.coin::after { content:"₩"; position:absolute; inset:0; display:grid; place-items:center; color:#fff; font-weight:800; font-size:15px; }
+.coin.c-b::after { font-size: 11px; }
+
+/* ---------- Section frame ---------- */
+.panel {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-xl); box-shadow: var(--shadow);
+  margin-top: -36px; position: relative; padding: 44px 40px 48px;
+}
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 26px; }
+.section-head h2 { font-size: 24px; font-weight: 700; }
+.section-head .hint { font-size: 13.5px; color: var(--ink-faint); }
+
+/* ---------- Calculator grid ---------- */
+.calc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.calc-card {
+  position: relative; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-lg); padding: 22px 22px 20px; transition: all .18s; overflow: hidden;
+}
+.calc-card:hover { border-color: #cfd6e6; box-shadow: var(--shadow); transform: translateY(-3px); }
+.calc-card .ico {
+  width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 16px;
+}
+.calc-card .ico svg { width: 25px; height: 25px; }
+.calc-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 7px; }
+.calc-card p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; max-width: 30ch; }
+.calc-card .go {
+  position: absolute; right: 18px; bottom: 18px; width: 30px; height: 30px; border-radius: 9px;
+  background: var(--surface-2); display: grid; place-items: center; color: var(--ink-faint);
+  transition: all .18s;
+}
+.calc-card .go svg { width: 16px; height: 16px; }
+.calc-card:hover .go { background: var(--navy); color: #fff; transform: translateX(3px); }
+
+/* icon tints */
+.t-blue  { background: var(--blue-soft);  color: var(--blue); }
+.t-green { background: var(--green-soft); color: var(--green); }
+.t-orange{ background: var(--orange-soft);color: var(--orange); }
+.t-navy  { background: #e8ebf5;           color: var(--navy); }
+.t-teal  { background: #e3f3f4;           color: #2f9aa6; }
+.t-purple{ background: #efe9f8;           color: #7a59c0; }
+.t-red   { background: var(--red-soft);   color: var(--red); }
+
+/* ---------- Bottom CTA ---------- */
+.bottom-cta {
+  margin-top: 34px; background: linear-gradient(180deg, #f7f8fb, #eef1f7);
+  border: 1px solid var(--line-2); border-radius: var(--r-xl);
+  padding: 30px 36px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.bottom-cta .cta-ico {
+  width: 56px; height: 56px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line);
+  display: grid; place-items: center; color: var(--navy); flex: none;
+}
+.bottom-cta .cta-ico svg { width: 28px; height: 28px; }
+.bottom-cta .txt h3 { font-size: 19px; font-weight: 700; }
+.bottom-cta .txt p { font-size: 14px; color: var(--ink-soft); margin-top: 5px; }
+.bottom-cta .btn { margin-left: auto; }
+
+@media (max-width: 920px) {
+  .calc-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-top: 44px; padding-bottom: 56px; gap: 8px; }
+  .hero-art { height: 280px; order: -1; transform: scale(.92); }
+  .panel { padding: 30px 18px 34px; border-radius: 18px; }
+  .calc-grid { grid-template-columns: 1fr; }
+  .bottom-cta { padding: 24px; }
+  .bottom-cta .btn { margin-left: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ Header ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="logo"><svg data-lucide="calculator"></svg></span>
+      <span class="name">생활비 계산소</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="active">계산기</a>
+      <a href="pages/info/guide.html">가이드</a>
+      <a href="pages/info/faq.html">FAQ</a>
+      <a href="pages/info/contact.html">문의하기</a>
+    </nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <h1>복잡한 생활비,<br><span class="accent">먼저 계산</span>해보세요</h1>
+      <p class="sub">월세·자취·알바·이사·중고거래·반려동물·육아 비용까지, 생활에 꼭 필요한 계산기를 한곳에서 무료로 사용해보세요.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#calculators">계산기 둘러보기 <svg data-lucide="arrow-right"></svg></a>
+        <a class="btn btn-ghost btn-lg" href="pages/info/guide.html">사용법 보기</a>
+      </div>
+      <div class="trust">
+        <span><svg data-lucide="check-circle-2"></svg> 로그인 없이 바로 사용</span>
+        <span><svg data-lucide="check-circle-2"></svg> 입력값 서버 저장 안 함</span>
+        <span><svg data-lucide="check-circle-2"></svg> 모바일 지원</span>
+      </div>
+    </div>
+
+    <!-- CSS illustration -->
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-donut"></div>
+      <div class="art-calc">
+        <div class="disp num">1,250,000</div>
+        <div class="keys">
+          <i></i><i></i><i></i><i class="op"></i>
+          <i></i><i></i><i></i><i class="op"></i>
+          <i></i><i></i><i></i><i class="eq"></i>
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="art-bars"><b></b><b></b><b></b><b></b></div>
+      <div class="coin c-a"></div>
+      <div class="coin c-b"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Calculators ============ -->
+<main class="wrap" id="calculators">
+  <div class="panel">
+    <div class="section-head">
+      <h2>추천 계산기</h2>
+      <span class="hint">생활 결정 전에 숫자로 먼저 확인하세요</span>
+    </div>
+
+    <div class="calc-grid">
+      <a class="calc-card" href="pages/calculators/moving-cost-calculator.html">
+        <div class="ico t-blue"><svg data-lucide="truck"></svg></div>
+        <h3>이사 비용 계산기</h3>
+        <p>집 크기, 거리, 짐 양에 따른 예상 이사비를 확인해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/rent-cost-calculator.html">
+        <div class="ico t-navy"><svg data-lucide="home"></svg></div>
+        <h3>월세 유지비 계산기</h3>
+        <p>월세, 관리비, 공과금을 포함한 예상 주거비를 확인해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/living-alone-cost-calculator.html">
+        <div class="ico t-green"><svg data-lucide="user"></svg></div>
+        <h3>자취 생활비 계산기</h3>
+        <p>월 수입과 지출을 입력해 남는 금액을 확인해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/part-time-income-calculator.html">
+        <div class="ico t-orange"><svg data-lucide="briefcase"></svg></div>
+        <h3>알바·부업 실수령 계산기</h3>
+          <p>시급, 근무시간, 공제 여부를 기준으로 예상 수령액을 참고해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/used-item-price-calculator.html">
+        <div class="ico t-teal"><svg data-lucide="package"></svg></div>
+        <h3>중고거래 적정가 계산기</h3>
+        <p>구매가, 사용기간, 상태를 기준으로 참고 판매가를 확인해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/emergency-fund-calculator.html">
+        <div class="ico t-navy"><svg data-lucide="shield-check"></svg></div>
+        <h3>비상금 버티기 계산기</h3>
+        <p>현재 보유 현금으로 몇 개월을 버틸 수 있는지 계산해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/date-cost-calculator.html">
+        <div class="ico t-red"><svg data-lucide="heart"></svg></div>
+        <h3>데이트 비용 계산기</h3>
+        <p>월 데이트 횟수와 항목별 지출로 1인 부담액을 계산해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/pet-adoption-cost-calculator.html">
+        <div class="ico t-orange"><svg data-lucide="dog"></svg></div>
+        <h3>반려동물 입양 비용 계산기</h3>
+        <p>입양 초기비용과 월 유지비를 입력값 기준으로 예상해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+      <a class="calc-card" href="pages/calculators/baby-first-year-cost-calculator.html">
+        <div class="ico t-purple"><svg data-lucide="baby"></svg></div>
+        <h3>출산·육아 초기비용 계산기</h3>
+        <p>출산 준비비와 신생아 첫해 비용을 예상해보세요.</p>
+        <span class="go"><svg data-lucide="arrow-right"></svg></span>
+      </a>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+      <div class="cta-ico"><svg data-lucide="line-chart"></svg></div>
+      <div class="txt">
+        <h3>생활비 판단을 숫자로 점검해보세요</h3>
+        <p>최종 판단 전, 입력값 기준 예상치를 먼저 확인하면 선택이 쉬워집니다.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="pages/info/guide.html">계산기 사용법 보기 <svg data-lucide="arrow-right"></svg></a>
+    </div>
+  </div>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <span class="logo"><svg data-lucide="calculator"></svg></span>
+          <span class="name">생활비 계산소</span>
+        </a>
+        <p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links">
+        <a href="pages/info/about.html">소개</a>
+        <a href="pages/policy/privacy-policy.html">개인정보처리방침</a>
+        <a href="pages/info/usage-guide.html">이용 안내</a>
+        <a href="pages/info/contact.html">문의하기</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span class="copy">© 2026 생활비 계산소. All rights reserved.</span>
+      <div class="socials">
+        <a href="pages/info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a>
+        <a href="pages/info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a>
+        <a href="pages/info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

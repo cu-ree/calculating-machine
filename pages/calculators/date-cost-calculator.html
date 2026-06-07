@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>데이트 비용 계산기 — 생활비 계산소</title>
+<meta name="description" content="식비, 카페, 교통비, 선물, 여행 비용을 입력해 월 데이트 비용과 1년 비용을 계산해보세요." />
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../info/guide.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="데이트 비용 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>데이트 비용 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>데이트 비용 계산기</h1>
+      <p class="lead">식비, 카페, 교통비, 선물, 여행 비용을 입력해 월 데이트 비용과 1년 비용을 계산해보세요.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">데이트 비용, 더 알아보기</h2>
+    <p class="csub">반복되는 비용을 파악하고 예산을 세우는 데 도움이 되는 내용을 정리했어요.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 월 데이트 비용은 어떻게 계산할까?</h3>
+      <p>데이트 비용은 1회 비용에 월 데이트 횟수를 곱하고, 선물·여행처럼 가끔 생기는 항목을 더해 계산합니다. 한 번의 데이트는 부담이 적어 보여도 매달 반복되면 생활비에서 차지하는 비중이 꽤 커질 수 있습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 데이트 비용을 줄이는 방법</h3>
+      <ul class="bullets">
+        <li>외식 대신 홈쿡·산책 데이트로 식비·카페 비중을 낮춥니다.</li>
+        <li>지역 무료 전시·축제 같은 저비용 활동을 활용합니다.</li>
+        <li>기념일 예산을 미리 정해 충동 지출을 줄입니다.</li>
+      </ul>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 기념일 비용을 따로 잡아야 하는 이유</h3>
+      <p>생일·기념일·여행은 평소 데이트보다 지출 규모가 큽니다. 매달 비용에 섞어 보면 실제 부담을 과소평가하기 쉬우므로, 연간 예산으로 따로 떼어 관리하는 것이 좋습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 더치페이 계산 시 주의할 점</h3>
+      <p>완벽하게 절반으로 나누기보다, 항목별로 번갈아 부담하거나 비율을 정해두면 갈등이 줄어듭니다. 이 계산기의 1인 부담액은 설정한 더치페이 비율을 기준으로 한 참고 값입니다.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">5</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 이루어지며 저장되지 않습니다.</div></details>
+      <details><summary><span class="q">Q</span> 1회 비용과 월 비용 중 무엇을 입력하나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">식비·카페·교통비는 1회 기준으로 입력하고, 선물·여행은 월 단위로 입력하면 자연스럽게 합산됩니다.</div></details>
+      <details><summary><span class="q">Q</span> 부담 비율은 무엇을 뜻하나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">전체 데이트 비용 중 내가 부담하는 비율로, 더치페이 설정에 따라 달라집니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">6</span> 주의사항</h3>
+      <p>데이트 비용은 사람마다 다르며, 이 계산기는 예산 계획을 위한 참고용입니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="living-alone-cost-calculator.html"><span class="ico t-green"><svg data-lucide="user"></svg></span><span><span class="t">자취 생활비 계산기</span><br><span class="d">남는 금액 확인</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="emergency-fund-calculator.html"><span class="ico t-navy"><svg data-lucide="shield-check"></svg></span><span><span class="t">비상금 버티기 계산기</span><br><span class="d">버틸 수 있는 기간</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="baby-first-year-cost-calculator.html"><span class="ico t-purple"><svg data-lucide="baby"></svg></span><span><span class="t">출산·육아 초기비용 계산기</span><br><span class="d">첫해 예상 비용</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+        <p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 생활비 계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script>
+const { won } = window.calcEngineUtils;
+const money = n => `${won(n)}원`;
+const ratioText = n => `${Number.isFinite(n) ? n.toFixed(1) : '0.0'}%`;
+renderCalculator({
+  tip: '식비·카페·교통비는 1회 기준으로, 선물·여행은 월 단위로 입력하면 자연스럽게 합산돼요.',
+  fields: [
+    { id:'count',   label:'월 데이트 횟수', type:'number', unit:'회', value:'8', highlight:true },
+    { id:'meal',    label:'1회 식비', type:'number', value:'30,000' },
+    { id:'cafe',    label:'카페 / 디저트 비용', type:'number', value:'12,000' },
+    { id:'trans',   label:'교통비', type:'number', value:'6,000' },
+    { id:'culture', label:'영화 / 전시 / 공연', type:'number', value:'40,000' },
+    { id:'gift',    label:'선물 / 기념일 비용', type:'number', value:'50,000' },
+    { id:'travel',  label:'여행 / 숙박 비용', type:'number', value:'80,000' },
+    { id:'dutch',   label:'더치페이 비율', type:'select', options:['50 : 50','60 : 40','70 : 30','내가 전액'], value:'50 : 50' },
+    { id:'etc',     label:'기타 비용', type:'number', value:'20,000' },
+  ],
+  compute(v) {
+    const shareMap = { '50 : 50': 0.5, '60 : 40': 0.6, '70 : 30': 0.7, '내가 전액': 1 };
+    const share = shareMap[v.dutch] || 0.5;
+    const repeated = v.count * (v.meal + v.cafe + v.trans);
+    const monthly = repeated + v.culture + v.gift + v.travel + v.etc;
+    const yearly = monthly * 12;
+    const myShare = monthly * share;
+    const rows = [
+      ['식비', v.count * v.meal],
+      ['카페/디저트', v.count * v.cafe],
+      ['여행/숙박', v.travel],
+      ['선물/기념일', v.gift],
+      ['교통비', v.count * v.trans],
+      ['문화생활', v.culture],
+      ['기타', v.etc],
+    ];
+    return {
+      summary: [
+        { label:'월 데이트 비용', value:won(monthly), unit:'원' },
+        { label:'1년 데이트 비용', value:won(yearly), unit:'원', tone:'blue' },
+        { label:'1인 부담액', value:won(myShare), unit:'원', tone:'green' },
+        { label:'부담 비율', value:`${Math.round(share * 100)}%` },
+      ],
+      chartItems: rows.map(([label, value]) => ({ label, value })),
+      table: {
+        columns:[{label:'항목'},{label:'월 금액',r:true},{label:'연간 금액',r:true},{label:'비율',r:true}],
+        rows: rows.map(([label, value]) => [label, money(value), money(value * 12), ratioText(monthly > 0 ? value / monthly * 100 : 0)]),
+        totalRow:['합계', money(monthly), money(yearly), '100%'],
+      },
+      interpretLead:`월 데이트 비용은 ${money(monthly)}이고, 설정한 부담 비율 기준 1인 부담액은 ${money(myShare)}입니다.`,
+      interpretChecks:[
+        `반복 데이트 비용은 ${money(repeated)}으로 월 지출에서 꾸준히 누적돼요.`,
+        `더치페이 기준은 ${v.dutch}이며 내 부담률은 ${Math.round(share * 100)}%입니다.`,
+        v.gift + v.travel > 0 ? '선물·여행 같은 비정기 비용은 월 예산에 나누어 반영하는 편이 안전합니다.' : '비정기 비용이 적으면 월 예산 관리가 더 단순해집니다.',
+      ],
+    };
+  },
+  summary: [
+    { label:'월 데이트 비용', value:'574,000', unit:'원' },
+    { label:'1년 데이트 비용', value:'6,888,000', unit:'원', tone:'blue' },
+    { label:'1인 부담액', value:'287,000', unit:'원', tone:'green' },
+    { label:'부담 비율', value:'50%' },
+  ],
+  chartTitle:'월 데이트 비용 구성', chartTotalLabel:'월 데이트 비용',
+  chartItems:[
+    { label:'식비', value:240000 },
+    { label:'카페', value:96000 },
+    { label:'여행/숙박', value:80000 },
+    { label:'선물/기념일', value:50000 },
+    { label:'교통비', value:48000 },
+    { label:'문화생활', value:40000 },
+    { label:'기타', value:20000 },
+  ],
+  tableTitle:'데이트 항목 상세',
+  table:{
+    columns:[{label:'항목'},{label:'월 금액',r:true},{label:'연간 금액',r:true},{label:'비율',r:true}],
+    rows:[
+      ['식비','240,000원','2,880,000원','41.8%'],
+      ['카페/디저트','96,000원','1,152,000원','16.7%'],
+      ['여행/숙박','80,000원','960,000원','13.9%'],
+      ['선물/기념일','50,000원','600,000원','8.7%'],
+      ['교통비','48,000원','576,000원','8.4%'],
+      ['문화생활','40,000원','480,000원','7.0%'],
+      ['기타','20,000원','240,000원','3.5%'],
+    ],
+    totalRow:['합계','574,000원','6,888,000원','100%'],
+  },
+  interpretLead:'데이트 비용은 한 번의 큰 지출보다 반복되는 식비와 카페 비용에서 누적되는 경우가 많아요.',
+  interpretChecks:[
+    '식비와 카페가 월 데이트 비용의 절반 이상을 차지해요.',
+    '더치페이 기준 1인 부담액은 287,000원이에요.',
+    '여행·기념일 비용은 따로 모아두면 부담을 줄일 수 있어요.',
+  ],
+  csvName:'데이트비용_결과.csv',
+});
+</script>
+</body>
+</html>

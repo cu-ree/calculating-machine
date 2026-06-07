@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>월세 유지비 계산기 — 생활비 계산소</title>
+<meta name="description" content="월세 외에 관리비, 공과금, 통신비, 주차비까지 포함해 실제 주거 유지비를 계산해보세요." />
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../info/guide.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="월세 유지비 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>월세 유지비 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>월세 유지비 계산기</h1>
+      <p class="lead">월세 외에 관리비, 공과금, 통신비, 주차비까지 포함해 실제 주거 유지비를 계산해보세요.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">월세 유지비, 더 알아보기</h2>
+    <p class="csub">월세만 보고 놓치기 쉬운 비용과 적정 주거비 기준을 정리했어요.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 월세 외에 꼭 확인해야 할 비용</h3>
+      <p>주거비는 월세가 전부가 아닙니다. 관리비, 전기·가스·수도 같은 공과금, 인터넷·통신비, 주차비까지 더하면 실제 부담은 월세보다 훨씬 커집니다. 계약 전에 이 항목들을 모두 합산해 “실제 한 달 주거 유지비”를 기준으로 판단하는 것이 안전합니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 관리비 포함과 별도의 차이</h3>
+      <p>관리비에 수도·인터넷·청소비가 포함된 경우와 그렇지 않은 경우는 실제 부담이 크게 다릅니다. “관리비 포함”이라는 표현이 어떤 항목까지 포함하는지 반드시 확인하세요. 포함 범위가 넓으면 공과금 항목을 중복 입력하지 않도록 주의합니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 공과금 평균을 어떻게 잡아야 할까?</h3>
+      <ul class="bullets">
+        <li>가능하면 최근 3개월 고지서를 기준으로 평균을 냅니다.</li>
+        <li>여름 냉방·겨울 난방 시기를 포함해야 실제 부담에 가깝습니다.</li>
+        <li>1인 가구는 월 5~8만 원 내외가 일반적이지만 사용량에 따라 달라집니다.</li>
+      </ul>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 월 수입 대비 적정 주거비 비율</h3>
+      <p>흔히 월 수입의 30% 안팎을 주거비 적정선으로 보지만, 정답이 있는 것은 아닙니다. 비율이 높을수록 저축과 비상금 여력이 줄어드는 만큼, 본인의 목표와 함께 참고 지표로 활용하세요.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">5</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 이루어지며 서버로 전송하거나 저장하지 않습니다.</div></details>
+      <details><summary><span class="q">Q</span> 전세는 계산할 수 없나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">이 계산기는 월세 기준입니다. 전세 대출 이자를 월 단위로 환산해 월세 칸에 입력하면 비슷하게 활용할 수 있어요.</div></details>
+      <details><summary><span class="q">Q</span> 보증금은 왜 빠져 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">보증금은 매달 나가는 비용이 아니라 예치금이라 월 유지비 계산에서는 제외했습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">6</span> 주의사항</h3>
+      <p>공과금과 관리비는 계절, 건물, 사용량에 따라 달라질 수 있습니다. 이 계산기는 참고용입니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="living-alone-cost-calculator.html"><span class="ico t-green"><svg data-lucide="user"></svg></span><span><span class="t">자취 생활비 계산기</span><br><span class="d">남는 금액 확인</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="moving-cost-calculator.html"><span class="ico t-blue"><svg data-lucide="truck"></svg></span><span><span class="t">이사 견적 계산기</span><br><span class="d">예상 이사비 확인</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="emergency-fund-calculator.html"><span class="ico t-navy"><svg data-lucide="shield-check"></svg></span><span><span class="t">비상금 버티기 계산기</span><br><span class="d">버틸 수 있는 기간</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">생활비 계산소</span></a>
+        <p>생활 결정 전에 숫자로 먼저 확인하는 계산기 모음. 생활비 계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 생활비 계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script>
+const { won } = window.calcEngineUtils;
+const money = n => `${won(n)}원`;
+const ratioText = n => `${Number.isFinite(n) ? n.toFixed(1) : '0.0'}%`;
+renderCalculator({
+  tip: '공과금은 최근 3개월 평균으로 입력하면 계절 변동을 줄일 수 있어요.',
+  fields: [
+    { id:'rent',   label:'월세', type:'number', value:'550,000' },
+    { id:'maint',  label:'관리비', type:'number', value:'70,000' },
+    { id:'elec',   label:'전기요금', type:'number', value:'35,000' },
+    { id:'gas',    label:'가스요금', type:'number', value:'25,000' },
+    { id:'water',  label:'수도요금', type:'number', value:'12,000' },
+    { id:'comm',   label:'인터넷 / 통신비', type:'number', value:'45,000' },
+    { id:'parking',label:'주차비', type:'number', value:'50,000' },
+    { id:'etc',    label:'기타 고정비', type:'number', value:'30,000' },
+    { id:'income', label:'월 수입', type:'number', value:'2,400,000', highlight:true },
+  ],
+  compute(v) {
+    const utilities = v.elec + v.gas + v.water;
+    const monthly = v.rent + v.maint + utilities + v.comm + v.parking + v.etc;
+    const yearly = monthly * 12;
+    const ratio = v.income > 0 ? monthly / v.income * 100 : 0;
+    const left = v.income - monthly;
+    const rows = [
+      ['월세', v.rent],
+      ['관리비', v.maint],
+      ['공과금', utilities],
+      ['통신비', v.comm],
+      ['주차비', v.parking],
+      ['기타 고정비', v.etc],
+    ];
+    const ratioTone = ratio >= 40 ? 'red' : ratio >= 30 ? 'orange' : 'green';
+    const leftTone = left < 0 ? 'red' : 'green';
+    return {
+      summary: [
+        { label:'월 주거 유지비', value:won(monthly), unit:'원' },
+        { label:'1년 주거비', value:won(yearly), unit:'원', tone:'blue' },
+        { label:'수입 대비 비율', value:ratioText(ratio), tone:ratioTone },
+        { label:'남는 금액', value:won(left), unit:'원', tone:leftTone },
+      ],
+      chartItems: rows.map(([label, value]) => ({ label, value })),
+      table: {
+        columns:[{label:'항목'},{label:'월 금액',r:true},{label:'연간 금액',r:true},{label:'비율',r:true}],
+        rows: rows.map(([label, value]) => [
+          label,
+          money(value),
+          money(value * 12),
+          ratioText(monthly > 0 ? value / monthly * 100 : 0),
+        ]),
+        totalRow:['합계', money(monthly), money(yearly), '100%'],
+      },
+      interpretLead:`월 주거 유지비는 ${money(monthly)}이고 월 수입의 ${ratioText(ratio)} 수준입니다.`,
+      interpretChecks:[
+        `월세 외 비용은 ${money(monthly - v.rent)}으로, 월세만 볼 때보다 실제 부담이 커질 수 있어요.`,
+        ratio >= 40 ? '수입 대비 주거비 비율이 높은 편입니다. 고정비 조정 여지를 먼저 확인해보세요.' : ratio >= 30 ? '수입 대비 주거비 비율이 다소 높은 편입니다. 관리비와 공과금 포함 기준으로 비교해보세요.' : '수입 대비 주거비 비율은 비교적 안정적인 편입니다.',
+        left < 0 ? `주거비를 제외하면 ${money(Math.abs(left))}이 부족합니다.` : `주거비를 제외한 남는 금액은 ${money(left)}입니다.`,
+      ],
+    };
+  },
+  summary: [
+    { label:'월 주거 유지비', value:'817,000', unit:'원' },
+    { label:'1년 주거비', value:'9,804,000', unit:'원', tone:'blue' },
+    { label:'수입 대비 비율', value:'34.0%', tone:'green' },
+    { label:'남는 금액', value:'1,583,000', unit:'원', tone:'green' },
+  ],
+  chartTitle:'주거 유지비 구성', chartTotalLabel:'월 유지비',
+  chartItems:[
+    { label:'월세', value:550000 },
+    { label:'공과금', value:72000 },
+    { label:'관리비', value:70000 },
+    { label:'주차비', value:50000 },
+    { label:'통신비', value:45000 },
+    { label:'기타', value:30000 },
+  ],
+  tableTitle:'주거비 항목 상세',
+  table:{
+    columns:[{label:'항목'},{label:'월 금액',r:true},{label:'연간 금액',r:true},{label:'비율',r:true}],
+    rows:[
+      ['월세','550,000원','6,600,000원','67.3%'],
+      ['관리비','70,000원','840,000원','8.6%'],
+      ['공과금','72,000원','864,000원','8.8%'],
+      ['통신비','45,000원','540,000원','5.5%'],
+      ['주차비','50,000원','600,000원','6.1%'],
+      ['기타 고정비','30,000원','360,000원','3.7%'],
+    ],
+    totalRow:['합계','817,000원','9,804,000원','100%'],
+  },
+  interpretLead:'월세만 보고 판단하면 실제 부담을 낮게 볼 수 있어요. 관리비와 공과금을 포함한 주거 유지비를 기준으로 확인하는 것이 좋습니다.',
+  interpretChecks:[
+    '실제 주거 유지비는 월세보다 약 27만 원 큰 817,000원이에요.',
+    '수입의 34.0%를 주거비로 쓰고 있어 비교적 안정적인 편이에요.',
+    '공과금은 계절에 따라 달라지니 평균값으로 보는 것이 좋아요.',
+  ],
+  csvName:'월세유지비_결과.csv',
+});
+</script>
+</body>
+</html>
