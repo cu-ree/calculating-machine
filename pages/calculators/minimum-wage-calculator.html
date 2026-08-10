@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>최저임금 계산기 2026 | 시급·월급 미달 확인, 수습 감액 판정 - 급여계산소</title>
+<meta name="description" content="2026년 최저임금 시급 10,320원 기준으로 미달 여부를 확인합니다. 월급제는 209시간으로 환산해 비교하고, 수습 감액 90%가 실제로 가능한 경우인지 세 가지 요건으로 판정합니다." />
+<link rel="canonical" href="https://costcheck.kr/pages/calculators/minimum-wage-calculator.html" />
+<meta property="og:title" content="최저임금 계산기 2026 | 시급·월급 미달 확인, 수습 감액 판정" />
+<meta property="og:description" content="2026년 최저임금 10,320원. 월급 환산 비교와 수습 감액 요건 판정까지." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://costcheck.kr/pages/calculators/minimum-wage-calculator.html" />
+<meta property="og:site_name" content="급여계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "최저임금 계산기",
+  "url": "https://costcheck.kr/pages/calculators/minimum-wage-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "2026년 최저임금 기준으로 시급과 월급의 미달 여부를 확인하고 수습 감액 가능 여부를 판정합니다.",
+  "publisher": { "@type": "Organization", "name": "급여계산소" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "2026년 최저임금은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "시급 10,320원입니다. 고용노동부고시 제2025-47호로 2026년 1월 1일부터 12월 31일까지 적용됩니다. 8시간 일급은 82,560원, 월 환산액은 209시간 기준 2,156,880원입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "수습이면 무조건 90%를 줘도 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. 세 조건을 모두 충족해야 합니다. 1년 이상의 근로계약을 맺었고, 수습 시작일부터 3개월 이내이며, 고용노동부가 고시한 단순노무직이 아니어야 합니다. 1년 미만 기간제 계약이거나 단순노무직이면 수습이어도 감액할 수 없습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "최저임금보다 낮게 계약했으면 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "최저임금법에 따라 그 부분은 무효이며, 최저임금액과 동일한 임금을 지급하기로 한 것으로 봅니다. 근로자가 동의했더라도 마찬가지입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "월급이 최저임금을 넘는지 어떻게 확인하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월급을 월 소정근로시간으로 나눠 시급으로 환산한 뒤 최저임금과 비교합니다. 주 40시간 근무라면 주휴시간을 포함해 월 209시간이 기준이 됩니다."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822493819381330"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../guide/index.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="최저임금 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>최저임금 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>최저임금 계산기</h1>
+      <p class="lead">2026년 최저임금은 시급 10,320원입니다. 시급이든 월급이든 넣으면 미달 여부를 확인하고, 수습 감액이 실제로 가능한 경우인지도 함께 판정합니다.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">최저임금, 더 알아보기</h2>
+    <p class="csub">숫자보다 중요한 것은 어떤 경우에 감액이 가능한지입니다.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 2026년 최저임금</h3>
+      <p>고용노동부고시 제2025-47호에 따라 2026년 1월 1일부터 12월 31일까지 적용됩니다. 사업의 종류와 관계없이 모든 사업장에 동일하게 적용됩니다.</p>
+      <ul class="bullets">
+        <li>시간급 <strong>10,320원</strong></li>
+        <li>8시간 기준 일급 <strong>82,560원</strong></li>
+        <li>월 환산액 <strong>2,156,880원</strong> (209시간 기준)</li>
+      </ul>
+      <p>월 209시간은 주 40시간 근무자의 소정근로시간에 주휴 유급시간을 더해 환산한 값입니다. 시급 자체에 주휴수당이 포함되었다는 뜻이 아닙니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 수습 감액은 세 조건을 모두 충족해야 합니다</h3>
+      <p>"수습 3개월은 90%"라고만 알려져 있지만, 최저임금법 제5조 제2항은 조건을 두고 있습니다. 아래 <strong>세 가지를 모두</strong> 충족해야 감액이 가능합니다.</p>
+      <ul class="bullets">
+        <li>근로계약 기간이 <strong>1년 이상</strong>일 것</li>
+        <li>수습 시작일부터 <strong>3개월 이내</strong>일 것</li>
+        <li>고용노동부가 고시한 <strong>단순노무업무가 아닐 것</strong></li>
+      </ul>
+      <p>따라서 6개월 계약이나 3개월 단기 알바는 수습이라도 감액할 수 없습니다. 단순노무직으로 고시된 업무 역시 근로계약 기간과 무관하게 감액 대상이 아닙니다.</p>
+      <p>감액이 가능한 경우 2026년 기준 시급은 <strong>9,288원</strong>입니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 미달 계약은 동의했어도 무효입니다</h3>
+      <p>최저임금보다 낮은 금액으로 근로계약을 맺었다면 <strong>그 부분은 무효</strong>이며, 최저임금액과 같은 임금을 지급하기로 한 것으로 봅니다. 근로자가 서명했거나 구두로 동의했더라도 결과는 같습니다.</p>
+      <p>이미 지급받은 임금이 최저임금에 미치지 못한다면 차액을 청구할 수 있습니다. 고용노동부 상담은 국번 없이 1350입니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 월급제는 환산해서 비교합니다</h3>
+      <p>월급을 받는 경우 월 소정근로시간으로 나눠 시급으로 환산한 뒤 최저임금과 비교합니다.</p>
+      <p>주 40시간 근무라면 월 209시간이 기준이므로, 월급이 2,156,880원보다 적으면 최저임금 미달입니다. 근무시간이 이보다 짧다면 그에 맞춰 환산 시간도 줄어듭니다.</p>
+      <p>다만 최저임금 산입 범위에는 정기상여금과 복리후생비의 일부만 포함되고, 연장·야간·휴일수당은 산입되지 않습니다. 이 계산기는 기본급 기준으로 비교합니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">5</span> 최저임금과 주휴수당은 별개입니다</h3>
+      <p>시급이 최저임금을 충족하더라도 주휴수당은 별도로 발생합니다. 4주 평균 주 15시간 이상 근무하고 소정근로일을 개근했다면, 주휴수당을 추가로 받아야 합니다.</p>
+      <p>주휴수당까지 반영하면 주 40시간 이하 근무자의 실질 시급은 표시 시급보다 20% 높아집니다. <a href="weekly-holiday-pay-calculator.html">주휴수당 계산기</a>에서 확인해 보세요.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">6</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 수습이면 무조건 90%인가요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 1년 이상 계약, 수습 3개월 이내, 단순노무직이 아닐 것. 세 조건을 모두 충족해야 감액할 수 있습니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 최저임금보다 낮게 계약서를 썼습니다.<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">그 부분은 무효이며 최저임금액을 지급해야 합니다. 동의 여부와 관계없습니다. 차액을 청구할 수 있습니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 식대나 상여금도 최저임금에 포함되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">최저임금 산입 범위에 정기상여금과 복리후생비의 일부가 포함되지만 비율 기준이 있습니다. 연장·야간·휴일수당은 산입되지 않습니다. 정확한 판단은 급여명세서를 두고 노동청에 문의하는 것이 확실합니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 주의사항</h3>
+      <p>이 계산기는 기본급을 기준으로 최저임금 충족 여부를 비교합니다. 최저임금 산입 범위, 포괄임금제, 교대제 등 개별 사정에 따라 실제 판단은 달라질 수 있습니다. 분쟁이 있다면 고용노동부 상담(1350)이나 관할 노동청에 문의하세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">8</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="weekly-holiday-pay-calculator.html"><span class="ico t-green"><svg data-lucide="calendar-check"></svg></span><span><span class="t">주휴수당 계산기</span><br><span class="d">4주 평균으로 판정</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="part-time-income-calculator.html"><span class="ico t-navy"><svg data-lucide="wallet"></svg></span><span><span class="t">알바 실수령 계산기</span><br><span class="d">공제 후 실수령액</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="four-insurance-calculator.html"><span class="ico t-red"><svg data-lucide="shield-check"></svg></span><span><span class="t">4대보험료 계산기</span><br><span class="d">보험별 공제액</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+        <p>급여와 노동 관련 계산을 법정 기준으로 확인하는 계산기 모음. 급여계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 급여계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script src="../../assets/js/labor-calc.js"></script>
+<script>
+const { won } = window.calcEngineUtils;          // 표시용 포맷터 (문자열 반환)
+const money = n => `${won(n)}원`;
+const flr = n => Math.floor(Number(n.toFixed(6)));   // 산술용 원 단위 절사
+
+LaborCalc.ready().then(init).catch(err => {
+  const el = document.getElementById('calc-mount');
+  if (el) el.innerHTML =
+    '<div class="card csec"><p>계산에 필요한 기준값을 불러오지 못했습니다. ' +
+    '잠시 후 새로고침해 주세요.</p></div>';
+  console.error(err);
+});
+
+function init() {
+renderCalculator({
+  tip: '월급제라면 지급 형태를 월급으로 바꾸고 주 소정근로시간을 입력하세요. 주휴시간이 포함된 월 환산시간으로 비교합니다.',
+  fields: [
+    { id:'type',      label:'지급 형태', type:'seg', options:['시급','월급'], value:'시급' },
+    { id:'amount',    label:'받는 금액', type:'number', unit:'원', value:'10,320', highlight:true },
+    { id:'weekHours', label:'주 소정근로시간', type:'number', unit:'시간', value:'40' },
+    { id:'probation', label:'수습 기간 중', type:'seg', options:['아니오','예'], value:'아니오' },
+    { id:'contract',  label:'근로계약 기간', type:'seg', options:['1년 이상','1년 미만'], value:'1년 이상' },
+    { id:'simple',    label:'단순노무 업무', type:'seg', options:['아니오','예'], value:'아니오' },
+  ],
+
+  compute(v) {
+    const R = LaborCalc.rates.years['2026'].minimum_wage;
+    const isMonthly = v.type === '월급';
+
+    // 월 환산시간 = 주 소정근로시간 기준. 주 40시간이면 209시간.
+    const monthlyHours = v.weekHours >= 40
+      ? R.monthly_hours
+      : flr(v.weekHours * (1 + 8 / 40) * 4.345 * 100) / 100;
+
+    const hourly = isMonthly
+      ? (monthlyHours > 0 ? v.amount / monthlyHours : 0)
+      : v.amount;
+
+    const mw = LaborCalc.checkMinimumWage(hourly, {
+      probation: v.probation === '예',
+      contractOver1Year: v.contract === '1년 이상',
+      simpleLabor: v.simple === '예'
+    });
+
+    const stdMonthly = flr(mw.appliedHourly * monthlyHours);
+    const myMonthly = isMonthly ? v.amount : flr(hourly * monthlyHours);
+    const gap = myMonthly - stdMonthly;
+    const gapHourly = flr(hourly) - mw.appliedHourly;
+
+    // 수습 감액 요건 판정
+    const p = R.probation_discount;
+    const cond = [
+      { label:'1년 이상 근로계약', ok: v.contract === '1년 이상' },
+      { label:'수습 시작일부터 3개월 이내', ok: v.probation === '예' },
+      { label:'단순노무 업무가 아닐 것', ok: v.simple === '아니오' },
+    ];
+    const canDiscount = cond.every(c => c.ok);
+
+    const rows = [
+      ['적용 기준 시급', money(mw.appliedHourly),
+       mw.discountApplied ? '<span class="tag warn">수습 감액</span>' : '<span class="tag fixed">기본</span>',
+       mw.discountApplied ? `${money(R.hourly)}의 ${p.rate * 100}%` : R.notice],
+      ['내 시급', money(flr(hourly)),
+       mw.ok ? '<span class="tag fixed">충족</span>' : '<span class="tag warn">미달</span>',
+       isMonthly ? `월급 ÷ ${monthlyHours}시간` : '입력값'],
+      ['시급 차액', `${gapHourly < 0 ? '−' : '+'}${money(Math.abs(gapHourly))}`, '',
+       gapHourly < 0 ? '이만큼 부족합니다' : '기준을 넘습니다'],
+      ['월 환산시간', `${monthlyHours}시간`, '', `주 ${v.weekHours}시간 + 주휴시간`],
+      ['기준 월 환산액', money(stdMonthly), '', '적용 기준 시급 × 월 환산시간'],
+      ['내 월 환산액', money(myMonthly), '', isMonthly ? '입력값' : '시급 × 월 환산시간'],
+      ['월 차액', `${gap < 0 ? '−' : '+'}${money(Math.abs(gap))}`,
+       gap < 0 ? '<span class="tag warn">부족</span>' : '<span class="tag fixed">충족</span>', ''],
+    ];
+
+    const checks = [];
+    if (!mw.ok) {
+      checks.push(`최저임금에 미달합니다. 시급 기준 ${money(Math.abs(gapHourly))}, 월 환산 기준 ${money(Math.abs(gap))}이 부족합니다.`);
+      checks.push('최저임금보다 낮은 근로계약은 그 부분이 무효이며, 최저임금액과 같은 임금을 지급하기로 한 것으로 봅니다. 근로자가 동의했더라도 마찬가지입니다.');
+      checks.push('이미 지급받은 임금이 미달이라면 차액을 청구할 수 있습니다. 고용노동부 상담은 국번 없이 1350입니다.');
+    } else {
+      checks.push(`2026년 최저임금 ${money(mw.appliedHourly)} 기준을 충족합니다.`);
+    }
+
+    if (v.probation === '예') {
+      if (canDiscount) {
+        checks.push(`수습 감액 요건 세 가지를 모두 충족해 ${money(p.hourly)}까지 감액할 수 있습니다. 다만 수습 시작일부터 ${p.max_months}개월이 지나면 감액할 수 없습니다.`);
+      } else {
+        const missing = cond.filter(c => !c.ok).map(c => c.label);
+        checks.push(`수습 기간이지만 감액할 수 없습니다. 충족하지 못한 요건: ${missing.join(', ')}. 이 경우 기본 최저임금 ${money(R.hourly)}을 지급해야 합니다.`);
+      }
+    }
+
+    if (isMonthly) {
+      checks.push(`월급을 월 환산시간 ${monthlyHours}시간으로 나눠 시급 ${money(flr(hourly))}으로 환산해 비교했습니다. 연장·야간·휴일수당은 최저임금 산입 대상이 아니므로 제외하고 입력하세요.`);
+    }
+    if (v.weekHours >= 15) {
+      checks.push('최저임금을 충족하더라도 주휴수당은 별도로 발생합니다. 주휴수당까지 반영하면 실질 시급은 더 높아집니다.');
+    }
+
+    return {
+      summary: [
+        { label:'적용 기준 시급', value: won(mw.appliedHourly), unit:'원',
+          tone: mw.discountApplied ? 'orange' : undefined },
+        { label:'내 시급', value: won(flr(hourly)), unit:'원',
+          tone: mw.ok ? 'green' : 'red' },
+        { label:'판정', value: mw.ok ? '충족' : '미달', unit:'',
+          tone: mw.ok ? 'green' : 'red' },
+        { label:'월 차액', value: won(Math.abs(gap)), unit:'원',
+          tone: gap < 0 ? 'red' : 'green' },
+      ],
+      chartItems: [
+        { label:'내 월 환산액', value: Math.max(0, myMonthly) },
+        { label: gap < 0 ? '부족액' : '초과액', value: Math.abs(gap) },
+      ],
+      table: {
+        columns:[{label:'항목'},{label:'금액',r:true},{label:'판정'},{label:'설명'}],
+        rows: rows,
+        totalRow:['판정', mw.ok ? '최저임금 충족' : '최저임금 미달', '', ''],
+      },
+      interpretLead: mw.ok
+        ? `적용 기준 시급 ${money(mw.appliedHourly)}을 충족합니다. 월 환산으로 ${money(Math.abs(gap))} 여유가 있습니다.`
+        : `최저임금에 미달합니다. 시급 ${money(Math.abs(gapHourly))}, 월 ${money(Math.abs(gap))}이 부족합니다.`,
+      interpretChecks: checks,
+    };
+  },
+
+  summary: [
+    { label:'적용 기준 시급', value:'10,320', unit:'원' },
+    { label:'내 시급', value:'10,320', unit:'원', tone:'green' },
+    { label:'판정', value:'충족', unit:'', tone:'green' },
+    { label:'월 차액', value:'0', unit:'원', tone:'green' },
+  ],
+  chartTitle:'최저임금 대비', chartTotalLabel:'월 환산액',
+  chartItems:[
+    { label:'내 월 환산액', value:2156880 },
+    { label:'초과액', value:0 },
+  ],
+  tableTitle:'최저임금 비교 내역',
+  table:{
+    columns:[{label:'항목'},{label:'금액',r:true},{label:'판정'},{label:'설명'}],
+    rows:[
+      ['적용 기준 시급','10,320원','<span class="tag fixed">기본</span>','고용노동부고시 제2025-47호'],
+      ['내 시급','10,320원','<span class="tag fixed">충족</span>','입력값'],
+      ['시급 차액','+0원','','기준을 넘습니다'],
+      ['월 환산시간','209시간','','주 40시간 + 주휴시간'],
+      ['기준 월 환산액','2,156,880원','','적용 기준 시급 × 월 환산시간'],
+      ['내 월 환산액','2,156,880원','','시급 × 월 환산시간'],
+      ['월 차액','+0원','<span class="tag fixed">충족</span>',''],
+    ],
+    totalRow:['판정','최저임금 충족','',''],
+  },
+  interpretLead:'2026년 최저임금은 시급 10,320원, 월 환산 2,156,880원입니다.',
+  interpretChecks:[
+    '수습 감액 90%는 1년 이상 계약·3개월 이내·단순노무직 제외를 모두 충족해야 가능합니다.',
+    '최저임금 미달 계약은 동의했더라도 그 부분이 무효입니다.',
+    '최저임금을 충족하더라도 주휴수당은 별도로 발생합니다.',
+  ],
+  csvName:'최저임금_결과.csv',
+});
+}
+</script>
+</body>
+</html>

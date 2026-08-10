@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>연봉 실수령액 계산기 2026 | 세후 월급, 비과세·부양가족 반영 - 급여계산소</title>
+<meta name="description" content="연봉이나 월급을 넣으면 4대보험과 소득세를 빼고 실수령액을 계산합니다. 식대 등 비과세액을 분리해 계산하고, 공제대상 가족 수에 따른 간이세액표를 적용합니다. 2026년 요율 기준." />
+<link rel="canonical" href="https://costcheck.kr/pages/calculators/net-salary-calculator.html" />
+<meta property="og:title" content="연봉 실수령액 계산기 2026 | 세후 월급, 비과세·부양가족 반영" />
+<meta property="og:description" content="비과세액을 빼고 계산해야 정확합니다. 부양가족 수까지 반영한 세후 실수령액." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://costcheck.kr/pages/calculators/net-salary-calculator.html" />
+<meta property="og:site_name" content="급여계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "연봉 실수령액 계산기",
+  "url": "https://costcheck.kr/pages/calculators/net-salary-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "연봉 또는 월급에서 4대보험과 소득세를 공제한 실수령액을 계산합니다.",
+  "publisher": { "@type": "Organization", "name": "급여계산소" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "비과세액을 왜 따로 입력해야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "식대 같은 비과세 급여는 4대보험료와 소득세의 계산 기준에서 제외됩니다. 비과세액을 빼지 않고 계산하면 보험료와 세금이 실제보다 많게 나옵니다. 월 20만 원의 비과세가 있으면 실수령액이 약 3만 8천 원 차이납니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "부양가족 수가 실수령액에 얼마나 영향을 주나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "간이세액표는 공제대상 가족 수에 따라 세액이 달라집니다. 월 급여 300만 원 기준으로 본인 1명일 때와 4명일 때 원천징수 소득세가 약 5만 원 차이납니다. 연간으로는 60만 원이 넘습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "계산된 세금이 실제와 다를 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 매월 떼는 소득세는 간이세액표에 따른 예상 금액이며, 최종 세액은 다음 해 연말정산으로 정산됩니다. 의료비, 교육비, 기부금 등 공제 항목에 따라 환급받거나 추가로 납부하게 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "8세 이상 20세 이하 자녀가 있으면 어떻게 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "자녀 세액공제가 추가로 반영되어 실제 원천징수액은 이 계산 결과보다 낮아집니다. 정확한 금액은 국세청 홈택스의 간이세액표 계산 기능에서 자녀 수를 입력해 확인할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822493819381330"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../guide/index.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="연봉 실수령액 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>연봉 실수령액 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>연봉 실수령액 계산기</h1>
+      <p class="lead">연봉이나 월급을 넣으면 4대보험과 소득세를 빼고 실제로 통장에 들어오는 금액을 계산합니다. 식대 등 비과세액과 부양가족 수를 반영해야 정확합니다.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">실수령액, 더 알아보기</h2>
+    <p class="csub">같은 연봉이어도 실수령액이 달라지는 이유가 있습니다.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 비과세액을 빼지 않으면 결과가 틀립니다</h3>
+      <p>식대처럼 비과세로 지급되는 급여는 <strong>4대보험료와 소득세의 계산 기준에서 제외</strong>됩니다. 그런데 실제로는 통장에 들어옵니다. 그래서 비과세액이 클수록 실수령액이 늘어납니다.</p>
+      <p>월 급여 300만 원에 비과세 20만 원이 있다면 이렇게 갈립니다.</p>
+      <ul class="bullets">
+        <li>비과세를 반영하지 않으면 — 보험 291,522원 + 세금 93,330원 = 실수령 <strong>2,615,148원</strong></li>
+        <li>비과세 20만 원을 반영하면 — 보험 272,087원 + 세금 74,030원 = 실수령 <strong>2,653,883원</strong></li>
+      </ul>
+      <p>월 38,735원, 연간으로는 약 46만 원 차이입니다. 급여명세서에서 식대나 자가운전보조금 같은 비과세 항목을 확인해 입력하세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 부양가족 수가 세금을 크게 바꿉니다</h3>
+      <p>매월 떼는 소득세는 국세청 근로소득 간이세액표를 따릅니다. 이 표는 급여 구간과 <strong>공제대상 가족 수</strong>의 두 축으로 되어 있어, 가족 수에 따라 세액이 달라집니다.</p>
+      <p>월 급여 300만 원, 비과세 20만 원 기준으로 보면 이렇습니다.</p>
+      <ul class="bullets">
+        <li>본인 1명 — 소득세와 지방소득세 합계 74,030원</li>
+        <li>2명 — 54,780원</li>
+        <li>3명 — 27,690원</li>
+        <li>4명 — 21,920원</li>
+      </ul>
+      <p>1명과 4명의 차이가 월 52,110원, 연간 62만 원이 넘습니다. 공제대상 가족에는 본인과 배우자, 생계를 같이하는 부양가족이 포함됩니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 매월 떼는 세금은 확정 세액이 아닙니다</h3>
+      <p>간이세액표에 따라 원천징수되는 소득세는 <strong>미리 내는 세금</strong>입니다. 실제 부담해야 할 세액은 다음 해 연말정산에서 확정됩니다.</p>
+      <p>의료비, 교육비, 기부금, 신용카드 사용액, 주택자금 등 공제 항목에 따라 최종 세액이 달라지므로, 연말정산에서 돌려받을 수도 있고 더 낼 수도 있습니다.</p>
+      <p>그래서 이 계산기의 결과는 <strong>매월 통장에 들어오는 금액</strong>을 보여주는 것이지, 연간 세부담을 확정하는 것이 아닙니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 연봉이 오를수록 실수령률은 떨어집니다</h3>
+      <p>소득세는 누진세율이고 국민연금에는 상한이 있어, 연봉 구간마다 실수령률이 달라집니다. 비과세 20만 원, 본인 1명 기준으로 보면 이런 흐름입니다.</p>
+      <ul class="bullets">
+        <li>연봉 3,000만 원 — 실수령률 약 89.8%</li>
+        <li>연봉 4,000만 원 — 약 87.7%</li>
+        <li>연봉 6,000만 원 — 약 83.6%</li>
+        <li>연봉 1억 원 — 약 77.8%</li>
+      </ul>
+      <p>연봉 1억 원 부근에서는 국민연금 기준소득월액 상한(659만 원)에 도달해 연금 보험료가 고정됩니다. 보험료 구조는 <a href="four-insurance-calculator.html">4대보험 계산기</a>에서 자세히 볼 수 있습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">5</span> 8세 이상 20세 이하 자녀가 있다면</h3>
+      <p>자녀 세액공제가 추가로 적용되어 실제 원천징수액은 이 계산 결과보다 <strong>낮아집니다.</strong> 이 계산기는 공제대상 가족 수만 반영하고 자녀 세액공제는 따로 계산하지 않습니다.</p>
+      <p>정확한 금액이 필요하면 국세청 홈택스의 간이세액표 계산 기능에서 8세 이상 20세 이하 자녀 수를 함께 입력해 확인하세요.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">6</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 비과세액은 어디서 확인하나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">급여명세서의 지급 항목에서 식대, 자가운전보조금, 출산·보육수당 등이 비과세로 표시되어 있습니다. 항목별로 한도가 정해져 있으니 명세서 기준으로 입력하세요.</div></details>
+
+      <details><summary><span class="q">Q</span> 공제대상 가족에는 누가 포함되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">본인, 배우자, 생계를 같이하는 부양가족이 포함됩니다. 부양가족은 나이와 소득 요건을 충족해야 합니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 계산 결과가 급여명세서와 다릅니다.<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">비과세액 입력, 자녀 세액공제, 원천징수세액 선택 비율, 회사의 신고 방식 등에 따라 차이가 생길 수 있습니다. 원 단위 절사 방식으로도 몇십 원 차이가 납니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 주의사항</h3>
+      <p>2026년 요율과 국세청 근로소득 간이세액표를 적용합니다. 자녀 세액공제와 원천징수세액 선택 비율(80%·100%·120%)은 반영하지 않으며, 상여금이나 연장근로수당이 있는 달은 결과가 달라집니다. 참고용으로 이용해 주세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">8</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="four-insurance-calculator.html"><span class="ico t-navy"><svg data-lucide="shield-check"></svg></span><span><span class="t">4대보험 계산기</span><br><span class="d">보험별 상세 공제</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="severance-pay-calculator.html"><span class="ico t-green"><svg data-lucide="briefcase"></svg></span><span><span class="t">퇴직금 계산기</span><br><span class="d">퇴사 시 받을 금액</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="overtime-pay-calculator.html"><span class="ico t-red"><svg data-lucide="clock"></svg></span><span><span class="t">연장수당 계산기</span><br><span class="d">야간·휴일 가산</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+        <p>급여와 노동 관련 계산을 법정 기준으로 확인하는 계산기 모음. 급여계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 급여계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script src="../../assets/js/labor-calc.js"></script>
+<script>
+const { won } = window.calcEngineUtils;          // 표시용 포맷터 (문자열 반환)
+const money = n => `${won(n)}원`;
+const flr = n => Math.floor(Number(n.toFixed(6)));   // 산술용 원 단위 절사
+
+LaborCalc.ready().then(init).catch(err => {
+  const el = document.getElementById('calc-mount');
+  if (el) el.innerHTML =
+    '<div class="card csec"><p>계산에 필요한 기준값을 불러오지 못했습니다. ' +
+    '잠시 후 새로고침해 주세요.</p></div>';
+  console.error(err);
+});
+
+function init() {
+renderCalculator({
+  tip: '급여명세서의 식대 등 비과세 항목을 비과세액에 넣어야 정확합니다. 비과세를 빼지 않으면 보험료와 세금이 실제보다 많게 나옵니다.',
+  fields: [
+    { id:'type',   label:'입력 기준', type:'seg', options:['월급','연봉'], value:'월급' },
+    { id:'amount', label:'세전 금액', type:'number', unit:'원', value:'3,000,000', highlight:true },
+    { id:'nontax', label:'월 비과세액', type:'number', unit:'원', value:'200,000' },
+    { id:'family', label:'공제대상 가족 수', type:'number', unit:'명', value:'1' },
+  ],
+
+  compute(v) {
+    const monthlyGross = v.type === '연봉' ? flr(v.amount / 12) : v.amount;
+    const nontax = Math.min(v.nontax, monthlyGross);
+    const taxable = monthlyGross - nontax;               // 보험·세금 계산 기준
+    const family = Math.max(1, Math.min(v.family, 11));
+
+    const ins = LaborCalc.insuranceFull({ monthlyWage: taxable });
+    const tax = LaborCalc.withholdingTax({
+      monthlyTaxablePay: taxable,
+      familyCountIncludingSelf: family
+    });
+
+    const e = ins.employee;
+    const deduction = ins.employeeTotal + tax.total;
+    const net = monthlyGross - deduction;
+    const rate = monthlyGross ? net / monthlyGross : 0;
+    const yearlyGross = monthlyGross * 12;
+    const yearlyNet = net * 12;
+
+    // 비과세를 반영하지 않았을 때와 비교
+    const insNo = LaborCalc.insuranceFull({ monthlyWage: monthlyGross });
+    const taxNo = LaborCalc.withholdingTax({
+      monthlyTaxablePay: monthlyGross, familyCountIncludingSelf: family });
+    const netNo = monthlyGross - insNo.employeeTotal - taxNo.total;
+    const nontaxGain = net - netNo;
+
+    const rows = [
+      ['세전 급여', monthlyGross, '<span class="tag fixed">지급</span>',
+       v.type === '연봉' ? `연봉 ${won(v.amount)}원 ÷ 12` : '입력값'],
+      ['비과세액', 0, '<span class="tag opt">제외</span>',
+       nontax ? `${money(nontax)} — 보험·세금 대상에서 제외` : '입력 없음'],
+      ['과세 대상 급여', taxable, '', '세전 급여 − 비과세액'],
+      ['국민연금', -e.pension, '<span class="tag warn">공제</span>', '4.75%'],
+      ['건강보험', -e.health, '<span class="tag warn">공제</span>', '3.595%'],
+      ['장기요양', -e.longTermCare, '<span class="tag warn">공제</span>', '건강보험료 × 13.1405%'],
+      ['고용보험', -e.employment, '<span class="tag warn">공제</span>', '0.9%'],
+      ['소득세', -tax.incomeTax, '<span class="tag warn">공제</span>',
+       `간이세액표 · 공제대상 가족 ${family}명`],
+      ['지방소득세', -tax.localTax, '<span class="tag warn">공제</span>', '소득세의 10%'],
+    ];
+
+    const checks = [];
+    checks.push(`세전 ${money(monthlyGross)} 중 ${money(deduction)}이 공제되어 실수령률은 ${(rate * 100).toFixed(1)}%입니다.`);
+
+    if (nontax > 0) {
+      checks.push(`비과세 ${money(nontax)}을 반영해 보험료와 세금이 ${money(nontaxGain)} 줄었습니다. 연간 ${money(nontaxGain * 12)} 차이입니다. 비과세액을 빼지 않고 계산하면 실수령액이 실제보다 적게 나옵니다.`);
+    } else {
+      checks.push('비과세액이 0원으로 입력되어 있습니다. 급여명세서에 식대 등 비과세 항목이 있다면 입력해야 정확한 결과가 나옵니다.');
+    }
+
+    if (family === 1) {
+      const t2 = LaborCalc.withholdingTax({ monthlyTaxablePay: taxable, familyCountIncludingSelf: 2 });
+      const gap = tax.total - t2.total;
+      if (gap > 0) {
+        checks.push(`공제대상 가족이 2명이면 세금이 ${money(gap)} 줄어듭니다. 배우자나 부양가족이 있다면 가족 수를 정확히 입력하세요.`);
+      }
+    }
+
+    if (ins.capped.pension && monthlyGross > 6590000) {
+      checks.push('국민연금 기준소득월액 상한에 도달해 연금 보험료가 고정됩니다. 급여가 더 올라도 국민연금은 늘지 않습니다.');
+    }
+
+    checks.push('매월 떼는 소득세는 간이세액표에 따른 예상 금액입니다. 최종 세액은 다음 해 연말정산으로 확정되며, 공제 항목에 따라 환급받거나 추가 납부하게 됩니다.');
+    checks.push('8세 이상 20세 이하 자녀가 있으면 자녀 세액공제로 실제 원천징수액은 이보다 낮아집니다.');
+
+    return {
+      summary: [
+        { label:'월 실수령액', value: won(net), unit:'원', tone:'green' },
+        { label:'월 공제 합계', value: won(deduction), unit:'원', tone:'orange' },
+        { label:'실수령률', value: (rate * 100).toFixed(1), unit:'%' },
+        { label:'연 실수령액', value: won(yearlyNet), unit:'원', tone:'green' },
+      ],
+      chartItems: [
+        { label:'실수령액', value: Math.max(0, net) },
+        { label:'4대보험', value: ins.employeeTotal },
+        { label:'소득세', value: tax.incomeTax },
+        { label:'지방소득세', value: tax.localTax },
+      ],
+      table: {
+        columns:[{label:'항목'},{label:'금액',r:true},{label:'구분'},{label:'설명'}],
+        rows: rows.map(([label, value, t, memo]) =>
+          [label, `${value < 0 ? '−' : ''}${money(Math.abs(value))}`, t, memo]),
+        totalRow:['월 실수령액', money(net), '', `연 ${money(yearlyNet)}`],
+      },
+      interpretLead:
+        `세전 연봉 ${money(yearlyGross)} 기준 월 실수령액은 ${money(net)}, ` +
+        `연 실수령액은 ${money(yearlyNet)}입니다.`,
+      interpretChecks: checks,
+    };
+  },
+
+  summary: [
+    { label:'월 실수령액', value:'2,653,883', unit:'원', tone:'green' },
+    { label:'월 공제 합계', value:'346,117', unit:'원', tone:'orange' },
+    { label:'실수령률', value:'88.5', unit:'%' },
+    { label:'연 실수령액', value:'31,846,596', unit:'원', tone:'green' },
+  ],
+  chartTitle:'세전 급여는 어디로 갈까', chartTotalLabel:'세전 월급여',
+  chartItems:[
+    { label:'실수령액', value:2653883 },
+    { label:'4대보험', value:272087 },
+    { label:'소득세', value:67300 },
+    { label:'지방소득세', value:6730 },
+  ],
+  tableTitle:'공제 상세',
+  table:{
+    columns:[{label:'항목'},{label:'금액',r:true},{label:'구분'},{label:'설명'}],
+    rows:[
+      ['세전 급여','3,000,000원','<span class="tag fixed">지급</span>','입력값'],
+      ['비과세액','0원','<span class="tag opt">제외</span>','200,000원 — 보험·세금 대상에서 제외'],
+      ['과세 대상 급여','2,800,000원','','세전 급여 − 비과세액'],
+      ['국민연금','−133,000원','<span class="tag warn">공제</span>','4.75%'],
+      ['건강보험','−100,660원','<span class="tag warn">공제</span>','3.595%'],
+      ['장기요양','−13,227원','<span class="tag warn">공제</span>','건강보험료 × 13.1405%'],
+      ['고용보험','−25,200원','<span class="tag warn">공제</span>','0.9%'],
+      ['소득세','−67,300원','<span class="tag warn">공제</span>','간이세액표 · 공제대상 가족 1명'],
+      ['지방소득세','−6,730원','<span class="tag warn">공제</span>','소득세의 10%'],
+    ],
+    totalRow:['월 실수령액','2,653,883원','','연 31,846,596원'],
+  },
+  interpretLead:'세전 월급 300만 원, 비과세 20만 원 기준 월 실수령액은 2,653,883원입니다.',
+  interpretChecks:[
+    '비과세 20만 원을 반영하면 월 38,735원, 연간 46만 원가량 실수령액이 늘어납니다.',
+    '공제대상 가족 수에 따라 소득세가 달라집니다. 1명과 4명의 차이가 월 5만 원이 넘습니다.',
+    '매월 떼는 소득세는 예상 금액이며 최종 세액은 연말정산으로 확정됩니다.',
+  ],
+  csvName:'실수령액_결과.csv',
+});
+}
+</script>
+</body>
+</html>

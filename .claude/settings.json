@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"d:/python/calculating machine\" && mkdir -p assets/data tools pages/_archive pages/guide && ls -la assets/)",
+      "Bash(mv labor-calc.js assets/js/labor-calc.js)",
+      "Bash(mv rates.json assets/data/rates.json)",
+      "Bash(mv convert_tax_table.py tools/convert_tax_table.py)",
+      "Bash(mv labor-calc.test.js tools/labor-calc.test.js)",
+      "Bash(touch pages/guide/.gitkeep)",
+      "Bash(git mv *)",
+      "Bash(python tools/build_sitemap.py)"
+    ],
+    "additionalDirectories": [
+      "d:\\python\\calculating machine\\assets"
+    ]
+  }
+}

@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>연장근로수당 계산기 | 야간·휴일 가산, 5인 미만 여부까지 - 급여계산소</title>
+<meta name="description" content="월급을 넣으면 통상시급을 환산해 연장·야간·휴일근로 가산수당을 계산합니다. 연장과 야간이 겹칠 때의 중복 가산, 휴일 8시간 초과 100% 가산, 5인 미만 사업장 적용 제외까지 반영합니다." />
+<link rel="canonical" href="https://costcheck.kr/pages/calculators/overtime-pay-calculator.html" />
+<meta property="og:title" content="연장근로수당 계산기 | 야간·휴일 가산, 5인 미만 여부까지" />
+<meta property="og:description" content="통상시급 환산부터 중복 가산까지. 5인 미만 사업장 구분도 정확히 반영합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://costcheck.kr/pages/calculators/overtime-pay-calculator.html" />
+<meta property="og:site_name" content="급여계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "연장근로수당 계산기",
+  "url": "https://costcheck.kr/pages/calculators/overtime-pay-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "통상시급을 환산해 연장·야간·휴일근로 가산수당을 계산합니다.",
+  "publisher": { "@type": "Organization", "name": "급여계산소" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "연장근로와 야간근로가 겹치면 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "각각 가산되어 합산됩니다. 밤 10시 이후에 연장근로를 했다면 기본임금 100%에 연장 가산 50%와 야간 가산 50%가 더해져 총 200%가 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5인 미만 사업장도 연장수당을 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "받지 못합니다. 근로기준법 제56조의 연장·야간·휴일 가산수당은 상시근로자 5인 미만 사업장에 적용되지 않습니다. 다만 근로한 시간에 대한 기본임금은 지급받아야 하며, 제55조의 주휴수당은 5인 미만 사업장에도 적용됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "통상시급은 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "월 통상임금을 월 소정근로시간으로 나눕니다. 주 40시간 근무자는 주휴시간을 포함해 월 209시간이 기준입니다. 통상임금에는 기본급과 정기적·일률적으로 지급되는 수당이 포함되며, 연장·야간·휴일수당은 제외됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "휴일에 10시간 일하면 얼마를 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "8시간까지는 50% 가산, 8시간을 초과한 2시간은 100% 가산입니다. 통상시급이 1만 원이면 8시간분 12만 원과 2시간분 4만 원을 합해 16만 원이 됩니다."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822493819381330"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../guide/index.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="연장근로수당 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>연장근로수당 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>연장근로수당 계산기</h1>
+      <p class="lead">월급을 넣으면 통상시급을 환산해 연장·야간·휴일근로 가산수당을 계산합니다. 연장과 야간이 겹치는 시간은 양쪽 모두 입력하면 중복 가산됩니다.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">가산수당, 더 알아보기</h2>
+    <p class="csub">가산율보다 먼저 알아야 할 것은 통상시급입니다.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 모든 계산은 통상시급에서 출발합니다</h3>
+      <p>가산수당은 <strong>통상시급</strong>을 기준으로 계산합니다. 월급제 근로자라면 월 통상임금을 월 소정근로시간으로 나눠 환산합니다.</p>
+      <p>주 40시간 근무자는 주휴시간을 포함해 <code>월 209시간</code>이 기준입니다. 월 통상임금이 300만 원이면 통상시급은 14,354원입니다.</p>
+      <p>통상임금에는 기본급과 정기적·일률적으로 지급되는 수당이 포함됩니다. 연장·야간·휴일수당이나 실적에 따라 달라지는 성과급은 제외됩니다. 이 계산기에는 <strong>통상임금에 해당하는 금액만</strong> 입력하세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 가산율은 근로 유형마다 다릅니다</h3>
+      <table class="mini-table">
+        <thead><tr><th>구분</th><th style="text-align:right">가산</th><th style="text-align:right">총 지급률</th><th>기준</th></tr></thead>
+        <tbody>
+          <tr><td>연장근로</td><td style="text-align:right">+50%</td><td style="text-align:right">150%</td><td>1일 8시간·1주 40시간 초과</td></tr>
+          <tr><td>야간근로</td><td style="text-align:right">+50%</td><td style="text-align:right">150%</td><td>22:00 ~ 06:00</td></tr>
+          <tr><td>휴일근로 8시간 이내</td><td style="text-align:right">+50%</td><td style="text-align:right">150%</td><td>1일 8시간까지</td></tr>
+          <tr><td>휴일근로 8시간 초과</td><td style="text-align:right">+100%</td><td style="text-align:right">200%</td><td>8시간을 넘는 시간</td></tr>
+        </tbody>
+      </table>
+      <p>근거는 근로기준법 제56조입니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 연장과 야간이 겹치면 중복 가산됩니다</h3>
+      <p>밤 10시 이후에 연장근로를 했다면 <strong>연장 가산과 야간 가산이 각각 붙습니다.</strong> 둘 중 큰 것만 적용하는 것이 아닙니다.</p>
+      <p>통상시급 10,000원인 근로자가 밤 10시부터 12시까지 2시간 연장근로를 했다면 이렇게 됩니다.</p>
+      <ul class="bullets">
+        <li>기본임금 100% — 20,000원</li>
+        <li>연장 가산 50% — 10,000원</li>
+        <li>야간 가산 50% — 10,000원</li>
+        <li>합계 <strong>40,000원</strong> (총 200%)</li>
+      </ul>
+      <p>이 계산기에서는 겹치는 시간을 <strong>연장근로시간과 야간근로시간 양쪽에 모두</strong> 입력하세요. 교대제처럼 소정근로시간 안에서 야간에 일하는 경우라면 야간근로시간에만 입력하면 가산분만 계산됩니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 5인 미만 사업장은 가산수당이 없습니다</h3>
+      <p>근로기준법 제56조의 가산수당은 <strong>상시근로자 5인 미만 사업장에 적용되지 않습니다.</strong> 연장·야간·휴일근로를 해도 가산분 없이 근로한 시간에 대한 기본임금만 지급하면 됩니다.</p>
+      <p>다만 여기서 자주 혼동이 생깁니다. <strong>제55조의 주휴수당은 5인 미만 사업장에도 적용됩니다.</strong> "5인 미만이라 아무것도 없다"는 설명은 두 조문을 섞은 것입니다.</p>
+      <p>주휴수당은 <a href="weekly-holiday-pay-calculator.html">주휴수당 계산기</a>에서 별도로 확인하세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">5</span> 휴일근로는 8시간을 기준으로 나뉩니다</h3>
+      <p>휴일에 일한 시간 중 <strong>8시간까지는 50%</strong>, <strong>8시간을 초과한 시간은 100%</strong>가 가산됩니다. 여기서 8시간은 <em>하루</em> 기준입니다.</p>
+      <p>휴일에 10시간을 일했다면 8시간분과 2시간분을 나눠 계산해야 합니다. 여러 날에 걸쳐 휴일근로를 했다면 각 날짜별로 8시간 이내분과 초과분을 나눈 뒤 합계를 입력하세요.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">6</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 연장과 야간이 겹치면 하나만 받나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 각각 가산되어 총 200%가 됩니다. 겹치는 시간은 두 입력란에 모두 넣으세요.</div></details>
+
+      <details><summary><span class="q">Q</span> 5인 미만인데 야근을 많이 합니다.<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">가산수당은 적용되지 않지만 근로한 시간에 대한 기본임금은 받아야 합니다. 주휴수당도 요건을 충족하면 받을 수 있습니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 포괄임금제라 야근수당이 없다고 합니다.<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">포괄임금 계약이라도 실제 근로시간에 따른 법정 수당보다 적게 지급하면 차액을 청구할 수 있습니다. 계약서에 포함된 시간을 초과했는지 확인해 보세요.</div></details>
+
+      <details><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 주의사항</h3>
+      <p>통상시급은 월 209시간(주 40시간 기준)으로 환산합니다. 소정근로시간이 다르거나 교대제·탄력근로제를 적용받는다면 환산 기준이 달라질 수 있습니다. 통상임금의 범위를 두고 다툼이 있는 경우 고용노동부 상담(1350)이나 관할 노동청에 문의하세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">8</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="weekly-holiday-pay-calculator.html"><span class="ico t-green"><svg data-lucide="calendar-check"></svg></span><span><span class="t">주휴수당 계산기</span><br><span class="d">5인 미만도 적용</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="net-salary-calculator.html"><span class="ico t-navy"><svg data-lucide="banknote"></svg></span><span><span class="t">실수령액 계산기</span><br><span class="d">세후 월급 확인</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="annual-leave-calculator.html"><span class="ico t-red"><svg data-lucide="calendar-days"></svg></span><span><span class="t">연차 계산기</span><br><span class="d">연차수당 산정</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+        <p>급여와 노동 관련 계산을 법정 기준으로 확인하는 계산기 모음. 급여계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 급여계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script src="../../assets/js/labor-calc.js"></script>
+<script>
+const { won } = window.calcEngineUtils;          // 표시용 포맷터 (문자열 반환)
+const money = n => `${won(n)}원`;
+const flr = n => Math.floor(Number(n.toFixed(6)));   // 산술용 원 단위 절사
+
+LaborCalc.ready().then(init).catch(err => {
+  const el = document.getElementById('calc-mount');
+  if (el) el.innerHTML =
+    '<div class="card csec"><p>계산에 필요한 기준값을 불러오지 못했습니다. ' +
+    '잠시 후 새로고침해 주세요.</p></div>';
+  console.error(err);
+});
+
+function init() {
+renderCalculator({
+  tip: '밤 10시 이후 연장근로처럼 겹치는 시간은 연장과 야간 양쪽에 모두 입력하세요. 각각 가산되어 총 200%가 됩니다.',
+  fields: [
+    { id:'type',      label:'임금 형태', type:'seg', options:['월급','시급'], value:'월급' },
+    { id:'amount',    label:'통상임금', type:'number', unit:'원', value:'3,000,000', highlight:true },
+    { id:'monHours',  label:'월 소정근로시간', type:'number', unit:'시간', value:'209' },
+    { id:'ot',        label:'연장근로시간', type:'number', unit:'시간', value:'10' },
+    { id:'night',     label:'야간근로시간 (22~06시)', type:'number', unit:'시간', value:'4' },
+    { id:'hol8',      label:'휴일근로 8시간 이내분', type:'number', unit:'시간', value:'8' },
+    { id:'holOver',   label:'휴일근로 8시간 초과분', type:'number', unit:'시간', value:'0' },
+    { id:'size',      label:'사업장 규모', type:'seg', options:['5인 이상','5인 미만'], value:'5인 이상' },
+  ],
+
+  compute(v) {
+    const monHours = v.monHours > 0 ? v.monHours : 209;
+    const hourly = v.type === '시급' ? v.amount : flr(v.amount / monHours);
+    const under5 = v.size === '5인 미만';
+
+    const r = LaborCalc.overtimePay({
+      hourlyWage: hourly,
+      under5Employees: under5,
+      overtimeHours: v.ot,
+      nightHours: v.night,
+      holidayHoursWithin8: v.hol8,
+      holidayHoursOver8: v.holOver
+    });
+
+    // 5인 이상이었다면 받았을 금액 (5인 미만일 때 손실 규모 표시용)
+    const ifOver5 = LaborCalc.overtimePay({
+      hourlyWage: hourly, under5Employees: false,
+      overtimeHours: v.ot, nightHours: v.night,
+      holidayHoursWithin8: v.hol8, holidayHoursOver8: v.holOver
+    });
+
+    const baseHours = v.ot + v.hol8 + v.holOver;
+    const rate = p => `${(100 + p * 100).toFixed(0)}%`;
+
+    const rows = [
+      ['통상시급', hourly, '<span class="tag fixed">기준</span>',
+       v.type === '월급' ? `통상임금 ÷ ${monHours}시간` : '입력값'],
+      ['기본임금', r.basePay, '<span class="tag fixed">100%</span>',
+       `연장·휴일 근로 ${baseHours}시간분`],
+      ['연장 가산', r.extra.overtime, under5 ? '<span class="tag opt">미적용</span>' : '<span class="tag warn">+50%</span>',
+       `${v.ot}시간 × 통상시급 × 50%`],
+      ['야간 가산', r.extra.night, under5 ? '<span class="tag opt">미적용</span>' : '<span class="tag warn">+50%</span>',
+       `${v.night}시간 × 통상시급 × 50%`],
+      ['휴일 가산 (8h 이내)', r.extra.holidayWithin8, under5 ? '<span class="tag opt">미적용</span>' : '<span class="tag warn">+50%</span>',
+       `${v.hol8}시간 × 통상시급 × 50%`],
+      ['휴일 가산 (8h 초과)', r.extra.holidayOver8, under5 ? '<span class="tag opt">미적용</span>' : '<span class="tag warn">+100%</span>',
+       `${v.holOver}시간 × 통상시급 × 100%`],
+    ];
+
+    const checks = [];
+    if (v.type === '월급') {
+      checks.push(`통상임금 ${money(v.amount)}을 월 ${monHours}시간으로 나눠 통상시급 ${money(hourly)}으로 환산했습니다. 통상임금에는 기본급과 정기·일률적 수당만 포함되며 연장·야간·휴일수당은 제외됩니다.`);
+    }
+
+    if (under5) {
+      checks.push(`5인 미만 사업장이므로 근로기준법 제56조의 가산수당이 적용되지 않습니다. 5인 이상이었다면 가산분 ${money(ifOver5.extraTotal)}을 추가로 받았을 금액입니다.`);
+      checks.push('다만 근로한 시간에 대한 기본임금은 지급받아야 합니다. 그리고 제55조의 주휴수당은 5인 미만 사업장에도 적용되므로 별도로 확인하세요.');
+    } else {
+      if (v.ot > 0 && v.night > 0) {
+        const both = Math.min(v.ot, v.night);
+        checks.push(`연장근로와 야간근로가 겹치는 시간이 있다면 각각 가산되어 총 200%가 됩니다. 두 항목에 모두 입력한 ${both}시간이 여기에 해당한다면 그 시간의 지급률은 200%입니다.`);
+      }
+      if (v.holOver > 0) {
+        checks.push(`휴일근로 8시간 초과분 ${v.holOver}시간은 100%가 가산되어 지급률이 200%가 됩니다.`);
+      }
+      checks.push(`가산수당 합계는 ${money(r.extraTotal)}이며, 기본임금을 포함한 총 지급액은 ${money(r.total)}입니다.`);
+    }
+
+    if (v.night > 0 && v.ot === 0) {
+      checks.push('야간근로시간만 입력하셨습니다. 소정근로시간 안에서 야간에 일한 경우라면 기본임금은 월급에 이미 포함되어 있으므로 가산분만 계산됩니다.');
+    }
+
+    return {
+      summary: [
+        { label:'통상시급', value: won(hourly), unit:'원' },
+        { label:'가산수당 합계', value: won(r.extraTotal), unit:'원',
+          tone: r.extraTotal > 0 ? 'green' : 'red' },
+        { label:'기본임금', value: won(r.basePay), unit:'원' },
+        { label:'총 지급액', value: won(r.total), unit:'원', tone:'green' },
+      ],
+      chartItems: [
+        { label:'기본임금', value: r.basePay },
+        { label:'연장 가산', value: r.extra.overtime },
+        { label:'야간 가산', value: r.extra.night },
+        { label:'휴일 가산', value: r.extra.holidayWithin8 + r.extra.holidayOver8 },
+      ],
+      table: {
+        columns:[{label:'항목'},{label:'금액',r:true},{label:'가산율'},{label:'산정 기준'}],
+        rows: rows.map(([label, value, t, memo]) => [label, money(value), t, memo]),
+        totalRow:['총 지급액', money(r.total), '', `가산분 ${money(r.extraTotal)} 포함`],
+      },
+      interpretLead: under5
+        ? `5인 미만 사업장이라 가산수당이 발생하지 않습니다. 근로시간 ${baseHours}시간에 대한 기본임금 ${money(r.basePay)}만 지급됩니다.`
+        : `통상시급 ${money(hourly)} 기준으로 가산수당 ${money(r.extraTotal)}이 발생하며, 총 지급액은 ${money(r.total)}입니다.`,
+      interpretChecks: checks,
+    };
+  },
+
+  summary: [
+    { label:'통상시급', value:'14,354', unit:'원' },
+    { label:'가산수당 합계', value:'157,894', unit:'원', tone:'green' },
+    { label:'기본임금', value:'258,372', unit:'원' },
+    { label:'총 지급액', value:'416,266', unit:'원', tone:'green' },
+  ],
+  chartTitle:'가산수당 구성', chartTotalLabel:'총 지급액',
+  chartItems:[
+    { label:'기본임금', value:258372 },
+    { label:'연장 가산', value:71770 },
+    { label:'야간 가산', value:28708 },
+    { label:'휴일 가산', value:57416 },
+  ],
+  tableTitle:'가산수당 산정 내역',
+  table:{
+    columns:[{label:'항목'},{label:'금액',r:true},{label:'가산율'},{label:'산정 기준'}],
+    rows:[
+      ['통상시급','14,354원','<span class="tag fixed">기준</span>','통상임금 ÷ 209시간'],
+      ['기본임금','258,372원','<span class="tag fixed">100%</span>','연장·휴일 근로 18시간분'],
+      ['연장 가산','71,770원','<span class="tag warn">+50%</span>','10시간 × 통상시급 × 50%'],
+      ['야간 가산','28,708원','<span class="tag warn">+50%</span>','4시간 × 통상시급 × 50%'],
+      ['휴일 가산 (8h 이내)','57,416원','<span class="tag warn">+50%</span>','8시간 × 통상시급 × 50%'],
+      ['휴일 가산 (8h 초과)','0원','<span class="tag warn">+100%</span>','0시간 × 통상시급 × 100%'],
+    ],
+    totalRow:['총 지급액','416,266원','','가산분 157,894원 포함'],
+  },
+  interpretLead:'통상시급 14,354원 기준으로 가산수당 157,894원이 발생합니다.',
+  interpretChecks:[
+    '연장과 야간이 겹치는 시간은 각각 가산되어 총 200%가 됩니다.',
+    '휴일근로는 8시간까지 50%, 초과분은 100%가 가산됩니다.',
+    '5인 미만 사업장은 가산수당이 적용되지 않지만 주휴수당은 적용됩니다.',
+  ],
+  csvName:'연장수당_결과.csv',
+});
+}
+</script>
+</body>
+</html>

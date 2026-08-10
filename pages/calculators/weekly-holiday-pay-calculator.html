@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>주휴수당 계산기 | 4주 평균으로 판정하는 정확한 주휴수당 - 급여계산소</title>
+<meta name="description" content="주마다 근무시간이 달라도 4주를 평균해 주휴수당 대상 여부를 판정합니다. 주휴시간과 주·월 주휴수당, 주휴수당을 포함한 실질 시급까지 계산합니다. 5인 미만 사업장도 주휴수당은 받을 수 있습니다." />
+<link rel="canonical" href="https://costcheck.kr/pages/calculators/weekly-holiday-pay-calculator.html" />
+<meta property="og:title" content="주휴수당 계산기 | 4주 평균으로 판정하는 정확한 주휴수당" />
+<meta property="og:description" content="주마다 근무시간이 달라도 4주 평균으로 정확히 판정합니다. 실질 시급까지 확인하세요." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://costcheck.kr/pages/calculators/weekly-holiday-pay-calculator.html" />
+<meta property="og:site_name" content="급여계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "주휴수당 계산기",
+  "url": "https://costcheck.kr/pages/calculators/weekly-holiday-pay-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "4주 평균 소정근로시간으로 주휴수당 대상 여부를 판정하고 주휴시간과 주휴수당을 계산합니다.",
+  "publisher": { "@type": "Organization", "name": "급여계산소" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "매주 15시간을 채워야 주휴수당을 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 근로기준법 제18조 제3항은 4주를 평균해 1주 소정근로시간이 15시간 미만인 경우에 주휴 규정을 적용하지 않도록 하고 있습니다. 어떤 주에 14시간이었더라도 4주 평균이 15시간 이상이면 주휴수당 대상이 될 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "5인 미만 사업장도 주휴수당을 받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 근로기준법 제56조의 연장·야간·휴일 가산수당은 5인 미만 사업장에 적용되지 않지만, 제55조의 주휴일과 주휴수당은 5인 미만 사업장에도 적용됩니다. 두 조문은 서로 다릅니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "최저임금에 주휴수당이 포함되어 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 2026년 최저임금 시급 10,320원 안에 주휴수당이 들어 있는 것이 아닙니다. 요건을 충족하면 주휴수당은 별도로 발생합니다. 월 환산액 2,156,880원이 209시간 기준인 것은 주휴 유급시간을 반영한 환산 방식일 뿐입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "주휴시간은 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "주 40시간 근무자는 8시간입니다. 그보다 짧게 일하면 비례해서 줄어듭니다. 주 20시간이면 20 ÷ 40 × 8 = 4시간이 주휴시간이 됩니다."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822493819381330"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../guide/index.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="주휴수당 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>주휴수당 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>주휴수당 계산기</h1>
+      <p class="lead">주마다 근무시간이 다르더라도 4주를 평균해 판정합니다. 어느 한 주가 15시간에 못 미쳤다고 해서 바로 대상에서 빠지는 것은 아닙니다.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">주휴수당, 더 알아보기</h2>
+    <p class="csub">가장 많이 잘못 알려진 부분부터 정리했습니다.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 주 15시간은 '매주'가 아니라 '4주 평균'입니다</h3>
+      <p>근로기준법 제18조 제3항은 <strong>4주를 평균해</strong> 1주 소정근로시간이 15시간 미만인 근로자에게 주휴 규정을 적용하지 않도록 하고 있습니다. 매주 15시간을 채워야 한다는 뜻이 아닙니다.</p>
+      <p>예를 들어 10시간, 10시간, 20시간, 20시간으로 일했다면 4주 평균은 15시간이므로 주휴수당 대상이 될 수 있습니다. 시험 기간이나 개인 사정으로 어느 한 주만 줄어든 경우가 여기에 해당합니다.</p>
+      <p>근무 기간이 4주가 되지 않으면 실제 근로한 기간을 기준으로 평균을 냅니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 5인 미만 사업장도 주휴수당은 받습니다</h3>
+      <p>이 부분이 특히 자주 혼동됩니다. 근로기준법 <strong>제56조</strong>의 연장·야간·휴일 <em>가산수당</em>은 상시근로자 5인 미만 사업장에 적용되지 않습니다. 하지만 <strong>제55조</strong>의 주휴일과 주휴수당은 5인 미만 사업장에도 적용됩니다.</p>
+      <p>"우리는 5인 미만이라 주휴수당이 없다"는 설명은 두 조문을 섞은 것입니다. 가산수당과 주휴수당은 근거 조문이 다릅니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 최저임금에 주휴수당은 포함되어 있지 않습니다</h3>
+      <p>2026년 최저임금은 시급 10,320원입니다. 이 금액 안에 주휴수당이 들어 있는 것이 아닙니다. 요건을 충족하면 주휴수당은 <strong>별도로</strong> 발생합니다.</p>
+      <p>최저임금 월 환산액이 2,156,880원(209시간 기준)인 것은 주휴 유급시간을 반영한 환산 방식일 뿐, 시급 자체에 포함되었다는 의미가 아닙니다.</p>
+      <p>주휴수당까지 반영한 실수령액은 <a href="part-time-income-calculator.html">알바 실수령 계산기</a>에서 확인할 수 있습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 주휴시간은 40시간을 기준으로 비례 산정합니다</h3>
+      <p>주 40시간을 일하는 통상근로자의 주휴시간은 8시간입니다. 그보다 짧게 일하면 비례해서 줄어듭니다.</p>
+      <ul class="bullets">
+        <li>주 40시간 → 8시간 → 시급 10,320원 기준 82,560원</li>
+        <li>주 30시간 → 6시간 → 61,920원</li>
+        <li>주 20시간 → 4시간 → 41,280원</li>
+        <li>주 15시간 → 3시간 → 30,960원</li>
+      </ul>
+      <p>법적으로 더 정확한 원형 공식은 <code>4주간 소정근로시간 합계 ÷ 같은 기간 통상근로자의 총 소정근로일수</code>입니다. 이 계산기는 주 40시간·주 5일 사업장을 전제로 한 간편식을 사용합니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">5</span> 개근 요건도 함께 봐야 합니다</h3>
+      <p>4주 평균 15시간을 넘겨도 <strong>해당 주의 소정근로일을 개근</strong>해야 그 주의 주휴수당이 발생합니다. 다만 지각이나 조퇴는 결근이 아니며, 사용자의 귀책사유로 일하지 못한 날도 결근으로 보지 않습니다.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">6</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 매주 15시간을 채워야 하나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 4주를 평균해 15시간 이상이면 됩니다. 어떤 주가 14시간이었더라도 평균이 넘으면 대상이 될 수 있습니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 5인 미만 사업장인데 받을 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">네. 주휴수당(제55조)은 5인 미만 사업장에도 적용됩니다. 적용되지 않는 것은 연장·야간·휴일 가산수당(제56조)입니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 4대보험에 가입되어 있어야 받나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아닙니다. 주휴수당은 4대보험 가입 여부와 무관합니다. 근로기준법상 근로자이면서 요건을 충족하면 발생합니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 주의사항</h3>
+      <p>이 계산기는 주 40시간·주 5일 사업장을 전제로 한 간편식을 사용합니다. 교대제나 특수한 근무 형태라면 실제 산정 방식이 달라질 수 있습니다. 분쟁이 있는 경우 고용노동부 상담(국번 없이 1350)이나 관할 노동청에 문의하세요.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">8</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="part-time-income-calculator.html"><span class="ico t-green"><svg data-lucide="wallet"></svg></span><span><span class="t">알바 실수령 계산기</span><br><span class="d">주휴 포함 실수령액</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="minimum-wage-calculator.html"><span class="ico t-navy"><svg data-lucide="scale"></svg></span><span><span class="t">최저임금 계산기</span><br><span class="d">2026년 기준 확인</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="annual-leave-calculator.html"><span class="ico t-red"><svg data-lucide="calendar-days"></svg></span><span><span class="t">연차 계산기</span><br><span class="d">같은 15시간 기준</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+        <p>급여와 노동 관련 계산을 법정 기준으로 확인하는 계산기 모음. 급여계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 급여계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script src="../../assets/js/labor-calc.js"></script>
+<script>
+const { won } = window.calcEngineUtils;          // 표시용 포맷터 (문자열 반환)
+const money = n => `${won(n)}원`;
+const flr = n => Math.floor(Number(n.toFixed(6)));   // 산술용 원 단위 절사
+const WEEKS_PER_MONTH = 4.345;
+
+LaborCalc.ready().then(init).catch(err => {
+  const el = document.getElementById('calc-mount');
+  if (el) el.innerHTML =
+    '<div class="card csec"><p>계산에 필요한 기준값을 불러오지 못했습니다. ' +
+    '잠시 후 새로고침해 주세요.</p></div>';
+  console.error(err);
+});
+
+function init() {
+renderCalculator({
+  tip: '매주 근무시간이 같다면 네 칸에 같은 값을 넣으세요. 주마다 달랐다면 그대로 입력하면 4주 평균으로 판정합니다.',
+  fields: [
+    { id:'wage',   label:'시급', type:'number', unit:'원', value:'10,320', highlight:true },
+    { id:'w1',     label:'1주차 근무시간', type:'number', unit:'시간', value:'20' },
+    { id:'w2',     label:'2주차 근무시간', type:'number', unit:'시간', value:'20' },
+    { id:'w3',     label:'3주차 근무시간', type:'number', unit:'시간', value:'20' },
+    { id:'w4',     label:'4주차 근무시간', type:'number', unit:'시간', value:'20' },
+    { id:'attend', label:'소정근로일 개근', type:'seg', options:['개근','결근 있음'], value:'개근' },
+    { id:'size',   label:'사업장 규모', type:'seg', options:['5인 이상','5인 미만'], value:'5인 이상' },
+  ],
+
+  compute(v) {
+    const list = [v.w1, v.w2, v.w3, v.w4];
+    const hp = LaborCalc.weeklyHolidayPay({
+      weeklyHoursList: list,
+      hourlyWage: v.wage,
+      fullAttendance: v.attend === '개근'
+    });
+    const mw = LaborCalc.checkMinimumWage(v.wage);
+
+    const avg = hp.avgWeeklyHours;
+    const weekly = hp.amount;
+    const monthly = hp.monthlyAmount;
+    const yearly = flr(weekly * 52);
+
+    // 주휴수당을 포함한 실질 시급
+    const realHourly = avg > 0 ? flr(v.wage * (1 + hp.holidayHours / avg)) : 0;
+    const basePayWeek = flr(v.wage * avg);
+
+    const rows = list.map((h, i) => [
+      `${i + 1}주차`, h,
+      h >= 15 ? '<span class="tag fixed">15h 이상</span>' : '<span class="tag opt">15h 미만</span>',
+      `${h}시간`
+    ]);
+
+    const checks = [];
+    if (hp.eligible) {
+      checks.push(`4주 평균 ${avg.toFixed(1)}시간으로 기준(15시간)을 충족합니다. 매주 15시간을 채우지 않아도 평균으로 판정합니다.`);
+      checks.push(`주휴시간은 ${hp.holidayHours.toFixed(1)}시간입니다. 소정근로시간을 40시간 기준으로 비례 환산한 값입니다.`);
+      checks.push(`주휴수당을 포함하면 실질 시급은 ${money(realHourly)}이 됩니다. 표시 시급 ${money(v.wage)}보다 ${((realHourly / v.wage - 1) * 100).toFixed(1)}% 높습니다.`);
+    } else {
+      hp.reasons.forEach(r => checks.push(r));
+      if (avg < 15) {
+        const need = (15 - avg) * 4;
+        checks.push(`4주 동안 ${need.toFixed(1)}시간을 더 근무하면 평균 15시간을 넘겨 주휴수당 대상이 됩니다.`);
+        checks.push('주 15시간은 연차휴가 발생 기준이기도 합니다. 이 기준에 미달하면 연차도 발생하지 않습니다.');
+      }
+    }
+    if (v.size === '5인 미만') {
+      checks.push('5인 미만 사업장이어도 주휴수당은 적용됩니다. 적용되지 않는 것은 연장·야간·휴일 가산수당(근로기준법 제56조)이며, 주휴수당은 제55조로 근거가 다릅니다.');
+    }
+    if (!mw.ok) {
+      checks.push(`입력하신 시급 ${money(v.wage)}은 2026년 최저임금 ${money(mw.appliedHourly)}보다 ${money(mw.shortfall)} 낮습니다.`);
+    }
+
+    return {
+      summary: [
+        { label:'4주 평균 근무시간', value: avg.toFixed(1), unit:'시간',
+          tone: hp.eligible ? 'green' : 'red' },
+        { label:'주휴시간', value: hp.holidayHours.toFixed(1), unit:'시간' },
+        { label:'주휴수당 (주)', value: won(weekly), unit:'원',
+          tone: weekly > 0 ? 'green' : undefined },
+        { label:'주휴수당 (월)', value: won(monthly), unit:'원',
+          tone: monthly > 0 ? 'green' : undefined },
+      ],
+      chartItems: [
+        { label:'기본급 (주)', value: basePayWeek },
+        { label:'주휴수당 (주)', value: weekly },
+      ],
+      table: {
+        columns:[{label:'구분'},{label:'값',r:true},{label:'판정'},{label:'설명'}],
+        rows: [
+          ...rows.map(([a, b, c, d]) => [a, `${b}시간`, c, d]),
+          ['4주 평균', `${avg.toFixed(1)}시간`,
+           hp.eligible ? '<span class="tag fixed">대상</span>' : '<span class="tag warn">제외</span>',
+           '근로기준법 제18조 제3항'],
+          ['주휴시간', `${hp.holidayHours.toFixed(1)}시간`, '', '평균 ÷ 40 × 8 (최대 8시간)'],
+          ['주휴수당 (주)', money(weekly), '', '주휴시간 × 시급'],
+          ['주휴수당 (월)', money(monthly), '', `주휴수당 × ${WEEKS_PER_MONTH}주`],
+          ['주휴수당 (연)', money(yearly), '', '주휴수당 × 52주'],
+          ['실질 시급', money(realHourly), '', '주휴수당 포함 환산'],
+        ],
+        totalRow:['월 주휴수당', money(monthly), '', ''],
+      },
+      interpretLead: hp.eligible
+        ? `4주 평균 ${avg.toFixed(1)}시간으로 주휴수당 대상입니다. 주 ${money(weekly)}, 월 ${money(monthly)}이 기본급과 별도로 발생합니다.`
+        : `4주 평균 ${avg.toFixed(1)}시간으로 주휴수당 대상이 아닙니다.`,
+      interpretChecks: checks,
+    };
+  },
+
+  summary: [
+    { label:'4주 평균 근무시간', value:'20.0', unit:'시간', tone:'green' },
+    { label:'주휴시간', value:'4.0', unit:'시간' },
+    { label:'주휴수당 (주)', value:'41,280', unit:'원', tone:'green' },
+    { label:'주휴수당 (월)', value:'179,361', unit:'원', tone:'green' },
+  ],
+  chartTitle:'주급 구성', chartTotalLabel:'주급 합계',
+  chartItems:[
+    { label:'기본급 (주)', value:206400 },
+    { label:'주휴수당 (주)', value:41280 },
+  ],
+  tableTitle:'주휴수당 산정 내역',
+  table:{
+    columns:[{label:'구분'},{label:'값',r:true},{label:'판정'},{label:'설명'}],
+    rows:[
+      ['1주차','20시간','<span class="tag fixed">15h 이상</span>','20시간'],
+      ['2주차','20시간','<span class="tag fixed">15h 이상</span>','20시간'],
+      ['3주차','20시간','<span class="tag fixed">15h 이상</span>','20시간'],
+      ['4주차','20시간','<span class="tag fixed">15h 이상</span>','20시간'],
+      ['4주 평균','20.0시간','<span class="tag fixed">대상</span>','근로기준법 제18조 제3항'],
+      ['주휴시간','4.0시간','','평균 ÷ 40 × 8 (최대 8시간)'],
+      ['주휴수당 (주)','41,280원','','주휴시간 × 시급'],
+      ['주휴수당 (월)','179,361원','','주휴수당 × 4.345주'],
+      ['실질 시급','12,384원','','주휴수당 포함 환산'],
+    ],
+    totalRow:['월 주휴수당','179,361원','',''],
+  },
+  interpretLead:'4주 평균 20.0시간으로 주휴수당 대상입니다. 주 41,280원, 월 179,361원이 기본급과 별도로 발생합니다.',
+  interpretChecks:[
+    '매주 15시간을 채우지 않아도 4주 평균으로 판정합니다.',
+    '주휴수당을 포함하면 실질 시급은 12,384원이 됩니다.',
+    '5인 미만 사업장도 주휴수당은 적용됩니다.',
+  ],
+  csvName:'주휴수당_결과.csv',
+});
+}
+</script>
+</body>
+</html>

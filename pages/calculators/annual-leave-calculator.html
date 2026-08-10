@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>연차 계산기 | 근속연수별 발생일수와 연차수당 계산 - 급여계산소</title>
+<meta name="description" content="근속기간을 넣으면 발생하는 연차 일수를 계산합니다. 1년 미만 월 1일 발생, 1년 이상 15일, 3년 이상 2년마다 1일 가산까지 반영하고, 미사용 연차수당도 함께 산정합니다." />
+<link rel="canonical" href="https://costcheck.kr/pages/calculators/annual-leave-calculator.html" />
+<meta property="og:title" content="연차 계산기 | 근속연수별 발생일수와 연차수당 계산" />
+<meta property="og:description" content="1년 미만과 1년 이상은 발생 방식이 다릅니다. 앞으로 몇 년에 며칠이 되는지까지 확인하세요." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://costcheck.kr/pages/calculators/annual-leave-calculator.html" />
+<meta property="og:site_name" content="급여계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "연차 계산기",
+  "url": "https://costcheck.kr/pages/calculators/annual-leave-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "근속기간에 따른 연차휴가 발생일수와 미사용 연차수당을 계산합니다.",
+  "publisher": { "@type": "Organization", "name": "급여계산소" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "입사 1년 미만이면 연차가 없나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "있습니다. 1개월을 개근할 때마다 1일씩 발생하며 최대 11일까지 쌓입니다. 1년 이상이 되면 별도로 15일이 발생합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3년 이상 근무하면 연차가 몇 일인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "계속근로 3년 이상이면 기본 15일에 1일이 가산되어 16일이 됩니다. 이후 2년마다 1일씩 늘어나며 최대 25일까지 가능합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "주 15시간 미만 근무자도 연차가 발생하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "발생하지 않습니다. 근로기준법 제18조 제3항에 따라 4주를 평균해 1주 소정근로시간이 15시간 미만이면 연차휴가 규정이 적용되지 않습니다. 주휴수당과 같은 기준입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "미사용 연차수당은 어떻게 계산하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "미사용 일수에 1일 통상임금을 곱합니다. 1일 통상임금은 통상시급에 1일 소정근로시간을 곱한 금액이며, 주 40시간 근무자는 통상시급의 8시간분입니다."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822493819381330"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../guide/index.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="연차 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>연차 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>연차 계산기</h1>
+      <p class="lead">근속기간을 넣으면 발생하는 연차 일수와 미사용 연차수당을 계산합니다. 1년 미만과 1년 이상은 발생 방식이 다릅니다.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">연차, 더 알아보기</h2>
+    <p class="csub">근속 1년을 기준으로 규칙이 완전히 달라집니다.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 1년 미만에도 연차는 발생합니다</h3>
+      <p>입사 1년이 안 됐다고 연차가 없는 것이 아닙니다. <strong>1개월을 개근할 때마다 1일씩</strong> 발생하며, 11개월까지 최대 11일이 쌓입니다.</p>
+      <p>그리고 근속 1년이 되면 이와 <strong>별도로 15일</strong>이 발생합니다. 1년 미만에 쓰지 않은 일수가 15일에 흡수되는 것이 아닙니다.</p>
+      <p>따라서 입사 후 2년 차에 접어들 때까지 이론상 최대 26일을 쓸 수 있습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 1년 이상이면 15일부터 시작합니다</h3>
+      <p>계속근로 1년 이상이고 <strong>직전 1년의 출근율이 80% 이상</strong>이면 15일의 연차가 발생합니다. 출근율이 80%에 미치지 못하면 15일 연차는 발생하지 않고, 개근한 달마다 1일씩 발생하는 방식이 적용됩니다.</p>
+      <p>여기서 출근율 계산 시 업무상 재해로 인한 휴업기간, 출산전후휴가, 육아휴직 기간 등은 출근한 것으로 봅니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 3년부터 2년마다 1일씩 늘어납니다</h3>
+      <p>계속근로 3년 이상이면 기본 15일에 1일이 가산되어 16일이 됩니다. 이후 <strong>2년마다 1일씩</strong> 늘어나며 <strong>최대 25일</strong>까지 가능합니다.</p>
+      <table class="mini-table">
+        <thead><tr><th>근속</th><th style="text-align:right">연차</th><th>근속</th><th style="text-align:right">연차</th></tr></thead>
+        <tbody>
+          <tr><td>1~2년</td><td style="text-align:right">15일</td><td>11~12년</td><td style="text-align:right">20일</td></tr>
+          <tr><td>3~4년</td><td style="text-align:right">16일</td><td>13~14년</td><td style="text-align:right">21일</td></tr>
+          <tr><td>5~6년</td><td style="text-align:right">17일</td><td>15~16년</td><td style="text-align:right">22일</td></tr>
+          <tr><td>7~8년</td><td style="text-align:right">18일</td><td>17~18년</td><td style="text-align:right">23일</td></tr>
+          <tr><td>9~10년</td><td style="text-align:right">19일</td><td>21년 이상</td><td style="text-align:right">25일</td></tr>
+        </tbody>
+      </table>
+      <p>25일에 도달하면 그 이상은 늘어나지 않습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 주 15시간 미만이면 연차가 없습니다</h3>
+      <p>4주를 평균해 1주 소정근로시간이 15시간 미만이면 연차휴가 규정이 적용되지 않습니다. 근로기준법 제18조 제3항입니다.</p>
+      <p><strong>주휴수당과 같은 기준</strong>이라, 주휴수당 대상이 아니면 연차도 발생하지 않습니다. 반대로 주휴수당 대상이면 연차도 발생합니다. 판정은 <a href="weekly-holiday-pay-calculator.html">주휴수당 계산기</a>에서 4주 평균으로 확인할 수 있습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">5</span> 미사용 연차수당은 1일 통상임금 기준입니다</h3>
+      <p>연차를 쓰지 못하고 남았다면 <strong>미사용 일수 × 1일 통상임금</strong>으로 수당이 산정됩니다.</p>
+      <p>1일 통상임금은 통상시급에 1일 소정근로시간을 곱한 금액입니다. 주 40시간·주 5일 근무자라면 통상시급의 8시간분입니다. 월 통상임금 300만 원이면 통상시급 14,354원, 1일 통상임금은 114,832원이 됩니다.</p>
+      <p>다만 사용자가 <strong>연차사용촉진</strong> 절차를 법에 맞게 진행했는데도 근로자가 사용하지 않은 경우에는 수당 지급 의무가 면제될 수 있습니다.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">6</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 1년 미만인데 연차를 쓸 수 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">네. 1개월 개근마다 1일씩 발생하며 최대 11일입니다. 1년이 되면 별도로 15일이 추가 발생합니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 회계연도 기준으로 준다고 합니다.<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">회사가 관리 편의를 위해 회계연도 기준으로 운영할 수 있지만, 근로자에게 불리해서는 안 됩니다. 퇴사 시점에 입사일 기준으로 정산해 부족분을 지급해야 합니다. 이 계산기는 입사일 기준입니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 5인 미만 사업장도 연차가 있나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">연차휴가 규정(제60조)은 상시근로자 5인 이상 사업장에 적용됩니다. 5인 미만은 법정 연차 의무가 없습니다. 주휴수당(제55조)과는 다른 부분입니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 주의사항</h3>
+      <p>이 계산기는 입사일을 기준으로 계속근로 기간에 따른 법정 연차를 계산합니다. 회계연도 기준 운영, 연차사용촉진, 육아휴직 등 개별 사정은 반영하지 않습니다. 1일 통상임금은 주 5일 근무를 전제로 환산하며, 연차휴가 규정은 상시근로자 5인 이상 사업장에 적용됩니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">8</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="weekly-holiday-pay-calculator.html"><span class="ico t-green"><svg data-lucide="calendar-check"></svg></span><span><span class="t">주휴수당 계산기</span><br><span class="d">같은 15시간 기준</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="severance-pay-calculator.html"><span class="ico t-navy"><svg data-lucide="briefcase"></svg></span><span><span class="t">퇴직금 계산기</span><br><span class="d">연차수당도 포함</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="overtime-pay-calculator.html"><span class="ico t-red"><svg data-lucide="clock"></svg></span><span><span class="t">연장수당 계산기</span><br><span class="d">통상시급 환산</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+        <p>급여와 노동 관련 계산을 법정 기준으로 확인하는 계산기 모음. 급여계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 급여계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script src="../../assets/js/labor-calc.js"></script>
+<script>
+const { won } = window.calcEngineUtils;          // 표시용 포맷터 (문자열 반환)
+const money = n => `${won(n)}원`;
+const flr = n => Math.floor(Number(n.toFixed(6)));   // 산술용 원 단위 절사
+
+LaborCalc.ready().then(init).catch(err => {
+  const el = document.getElementById('calc-mount');
+  if (el) el.innerHTML =
+    '<div class="card csec"><p>계산에 필요한 기준값을 불러오지 못했습니다. ' +
+    '잠시 후 새로고침해 주세요.</p></div>';
+  console.error(err);
+});
+
+function init() {
+renderCalculator({
+  tip: '근속기간은 입사일부터 오늘까지의 개월 수를 넣으세요. 1년 미만이면 개근한 달 수만큼 발생합니다.',
+  fields: [
+    { id:'months',   label:'근속기간', type:'number', unit:'개월', value:'30', highlight:true },
+    { id:'weekHours',label:'주 소정근로시간', type:'number', unit:'시간', value:'40' },
+    { id:'attend',   label:'직전 1년 출근율', type:'seg', options:['80% 이상','80% 미만'], value:'80% 이상' },
+    { id:'type',     label:'임금 형태', type:'seg', options:['월급','시급'], value:'월급' },
+    { id:'amount',   label:'통상임금', type:'number', unit:'원', value:'3,000,000' },
+    { id:'monHours', label:'월 소정근로시간', type:'number', unit:'시간', value:'209' },
+    { id:'used',     label:'사용한 연차', type:'number', unit:'일', value:'0' },
+  ],
+
+  compute(v) {
+    const monHours = v.monHours > 0 ? v.monHours : 209;
+    const hourly = v.type === '시급' ? v.amount : flr(v.amount / monHours);
+    const dailyHours = Math.min(v.weekHours / 5, 8);        // 주 5일 전제
+    const dailyWage = flr(hourly * dailyHours);
+
+    const a = LaborCalc.annualLeave({
+      serviceMonths: v.months,
+      weeklyHours: v.weekHours,
+      attendanceRate: v.attend === '80% 이상' ? 1 : 0.5
+    });
+
+    const days = a.days;
+    const unused = Math.max(0, days - v.used);
+    const pay = flr(unused * dailyWage);
+    const years = Math.floor(v.months / 12);
+
+    // 근속연수별 타임라인
+    const marks = [12, 24, 36, 60, 84, 120, 180, 252];
+    const timeline = marks.map(mo => {
+      const r = LaborCalc.annualLeave({ serviceMonths: mo, weeklyHours: v.weekHours });
+      const y = Math.floor(mo / 12);
+      const now = v.months >= mo && v.months < (marks.find(x => x > mo) || 9999);
+      return [
+        `근속 ${y}년`, `${r.days}일`,
+        now ? '<span class="tag fixed">현재</span>' : '',
+        `연차수당 환산 ${money(flr(r.days * dailyWage))}`
+      ];
+    });
+
+    const rows = [];
+    if (v.months < 12) {
+      rows.push(['발생 방식', '1개월 개근당 1일', '<span class="tag fixed">1년 미만</span>', '최대 11일']);
+      rows.push(['현재 발생 연차', `${days}일`, '', `근속 ${v.months}개월`]);
+      rows.push(['1년 도달 시', '15일 추가 발생', '', '1년 미만 발생분과 별도']);
+    } else {
+      rows.push(['기본 연차', '15일', '<span class="tag fixed">1년 이상</span>', '출근율 80% 이상']);
+      if (years >= 3) {
+        rows.push(['근속 가산', `${days - 15}일`, '', '3년 이상, 2년마다 1일 (최대 25일)']);
+      }
+      rows.push(['현재 발생 연차', `${days}일`, '', `근속 ${years}년 ${v.months % 12}개월`]);
+    }
+    rows.push(
+      ['사용한 연차', `${v.used}일`, '<span class="tag opt">사용</span>', ''],
+      ['미사용 연차', `${unused}일`, unused > 0 ? '<span class="tag warn">잔여</span>' : '', ''],
+      ['통상시급', money(hourly), '',
+       v.type === '월급' ? `통상임금 ÷ ${monHours}시간` : '입력값'],
+      ['1일 통상임금', money(dailyWage), '', `통상시급 × ${dailyHours}시간`],
+      ['미사용 연차수당', money(pay), '<span class="tag fixed">수당</span>', `${unused}일 × 1일 통상임금`]
+    );
+
+    const checks = [];
+    if (a.reasons && a.reasons.length) {
+      a.reasons.forEach(r => checks.push(r));
+      if (v.weekHours < 15) {
+        checks.push('주 15시간 미만은 연차와 주휴수당 모두 적용 제외입니다. 4주 평균으로 15시간을 넘기면 두 가지 모두 발생합니다.');
+      }
+    } else if (v.months < 12) {
+      checks.push(`근속 ${v.months}개월로 1개월 개근당 1일씩 ${days}일이 발생했습니다. 1년 미만 연차는 최대 11일까지 쌓입니다.`);
+      checks.push('근속 1년이 되면 15일이 별도로 발생합니다. 1년 미만에 쌓인 일수가 15일에 흡수되는 것이 아닙니다.');
+    } else {
+      checks.push(`근속 ${years}년으로 연차 ${days}일이 발생합니다.`);
+      if (years >= 3) {
+        const next = 3 + Math.ceil((years - 2) / 2) * 2;
+        if (days < 25) {
+          checks.push(`근속 ${next}년이 되면 1일이 더 가산됩니다. 3년 이상부터 2년마다 1일씩 늘어나며 최대 25일입니다.`);
+        } else {
+          checks.push('연차 상한 25일에 도달해 더 이상 늘어나지 않습니다.');
+        }
+      } else {
+        checks.push('근속 3년이 되면 1일이 가산되어 16일이 됩니다.');
+      }
+    }
+
+    if (unused > 0 && pay > 0) {
+      checks.push(`미사용 연차 ${unused}일에 대한 수당은 ${money(pay)}입니다. 다만 사용자가 연차사용촉진 절차를 법에 맞게 진행했다면 수당 지급 의무가 면제될 수 있습니다.`);
+    }
+    if (v.attend === '80% 미만') {
+      checks.push('직전 1년 출근율이 80% 미만이면 15일 연차가 발생하지 않고, 개근한 달마다 1일씩 발생하는 방식이 적용됩니다.');
+    }
+    checks.push('연차휴가 규정은 상시근로자 5인 이상 사업장에 적용됩니다. 5인 미만 사업장은 법정 연차 의무가 없습니다.');
+
+    return {
+      summary: [
+        { label:'발생 연차', value: days, unit:'일',
+          tone: days > 0 ? 'green' : 'red' },
+        { label:'미사용 연차', value: unused, unit:'일',
+          tone: unused > 0 ? 'orange' : undefined },
+        { label:'1일 통상임금', value: won(dailyWage), unit:'원' },
+        { label:'미사용 연차수당', value: won(pay), unit:'원',
+          tone: pay > 0 ? 'green' : undefined },
+      ],
+      chartItems: [
+        { label:'사용한 연차', value: Math.min(v.used, days) },
+        { label:'미사용 연차', value: unused },
+      ],
+      table: {
+        columns:[{label:'항목'},{label:'값',r:true},{label:'구분'},{label:'설명'}],
+        rows: [...rows, ...timeline],
+        totalRow:['미사용 연차수당', money(pay), '', `${unused}일 × ${money(dailyWage)}`],
+      },
+      interpretLead: days > 0
+        ? `근속 ${v.months}개월 기준 연차는 ${days}일이고, 미사용 ${unused}일에 대한 수당은 ${money(pay)}입니다.`
+        : '현재 조건으로는 연차가 발생하지 않습니다.',
+      interpretChecks: checks,
+    };
+  },
+
+  summary: [
+    { label:'발생 연차', value:'15', unit:'일', tone:'green' },
+    { label:'미사용 연차', value:'15', unit:'일', tone:'orange' },
+    { label:'1일 통상임금', value:'114,832', unit:'원' },
+    { label:'미사용 연차수당', value:'1,722,480', unit:'원', tone:'green' },
+  ],
+  chartTitle:'연차 사용 현황', chartTotalLabel:'발생 연차',
+  chartItems:[
+    { label:'사용한 연차', value:0 },
+    { label:'미사용 연차', value:15 },
+  ],
+  tableTitle:'연차 산정 내역',
+  table:{
+    columns:[{label:'항목'},{label:'값',r:true},{label:'구분'},{label:'설명'}],
+    rows:[
+      ['기본 연차','15일','<span class="tag fixed">1년 이상</span>','출근율 80% 이상'],
+      ['현재 발생 연차','15일','','근속 2년 6개월'],
+      ['사용한 연차','0일','<span class="tag opt">사용</span>',''],
+      ['미사용 연차','15일','<span class="tag warn">잔여</span>',''],
+      ['통상시급','14,354원','','통상임금 ÷ 209시간'],
+      ['1일 통상임금','114,832원','','통상시급 × 8시간'],
+      ['미사용 연차수당','1,722,480원','<span class="tag fixed">수당</span>','15일 × 1일 통상임금'],
+      ['근속 1년','15일','','연차수당 환산 1,722,480원'],
+      ['근속 3년','16일','','연차수당 환산 1,837,312원'],
+      ['근속 5년','17일','','연차수당 환산 1,952,144원'],
+      ['근속 10년','19일','','연차수당 환산 2,181,808원'],
+      ['근속 21년','25일','','연차수당 환산 2,870,800원'],
+    ],
+    totalRow:['미사용 연차수당','1,722,480원','','15일 × 114,832원'],
+  },
+  interpretLead:'근속 30개월 기준 연차는 15일이고, 미사용 15일에 대한 수당은 1,722,480원입니다.',
+  interpretChecks:[
+    '1년 미만에는 1개월 개근당 1일씩 최대 11일이 발생하며, 1년이 되면 15일이 별도로 추가됩니다.',
+    '3년 이상부터 2년마다 1일씩 가산되어 최대 25일까지 늘어납니다.',
+    '주 15시간 미만이면 연차와 주휴수당 모두 적용 제외입니다.',
+  ],
+  csvName:'연차_결과.csv',
+});
+}
+</script>
+</body>
+</html>

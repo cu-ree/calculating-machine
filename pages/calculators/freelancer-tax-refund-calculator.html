@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>프리랜서 3.3% 환급 계산기 | 단순경비율·기준경비율 판정 - 급여계산소</title>
+<meta name="description" content="프리랜서 3.3% 원천징수 환급 가능성을 판단합니다. 업종별 단순경비율과 기준경비율 중 어느 쪽이 적용되는지 직전연도 수입으로 판정하고, 손익분기 수입액까지 계산합니다." />
+<link rel="canonical" href="https://costcheck.kr/pages/calculators/freelancer-tax-refund-calculator.html" />
+<meta property="og:title" content="프리랜서 3.3% 환급 계산기 | 단순경비율·기준경비율 판정" />
+<meta property="og:description" content="직전연도 수입에 따라 경비율 방식이 갈립니다. 수백만 원 차이가 나는 지점을 확인하세요." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://costcheck.kr/pages/calculators/freelancer-tax-refund-calculator.html" />
+<meta property="og:site_name" content="급여계산소" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "프리랜서 3.3% 환급 계산기",
+  "url": "https://costcheck.kr/pages/calculators/freelancer-tax-refund-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "isAccessibleForFree": true,
+  "description": "프리랜서 3.3% 원천징수세액과 예상 종합소득세를 비교해 환급 가능성을 판단합니다.",
+  "publisher": { "@type": "Organization", "name": "급여계산소" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "3.3%를 떼면 무조건 환급받나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. 3.3%는 미리 낸 세금이며, 종합소득세 신고로 최종 세액이 확정됩니다. 최종 세액이 이미 낸 세금보다 적으면 환급, 많으면 추가 납부입니다. 수입이 많거나 경비율이 낮으면 오히려 더 내야 할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "단순경비율과 기준경비율은 어떻게 갈리나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "직전연도 인적용역 수입이 3,600만 원 미만이고 당해연도 수입이 7,500만 원 미만이면 단순경비율을 적용할 수 있습니다. 하나라도 초과하면 기준경비율이 적용됩니다. 두 방식의 경비 인정률 차이가 커서 세액이 크게 달라집니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "단순경비율은 수입 전체에 같은 비율로 적용되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. 수입금액 4,000만 원까지는 기본율, 그 초과분에는 더 낮은 초과율이 적용됩니다. 예를 들어 컴퓨터프로그래머 등 업종은 4,000만 원까지 64.1%, 초과분은 49.7%입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "3.3%에는 무엇이 포함되어 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "소득세 3%와 지방소득세 0.3%입니다. 그래서 최종 세액과 비교할 때도 종합소득세에 지방소득세 10%를 더한 금액으로 비교해야 정확합니다."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<link rel="stylesheet" href="../../assets/css/calculator.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4822493819381330"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+    <nav class="nav"><a href="../../index.html#calculators" class="active">계산기</a><a href="../guide/index.html">가이드</a><a href="../info/faq.html">FAQ</a><a href="../info/contact.html">문의하기</a></nav>
+    <button class="icon-btn" aria-label="다크 모드"><svg data-lucide="moon"></svg></button>
+    <button class="hamburger" aria-label="메뉴"><svg data-lucide="menu"></svg></button>
+  </div>
+</header>
+
+<main class="wrap page" data-screen-label="프리랜서 3.3% 환급 계산기">
+  <nav class="crumb">
+    <a href="../../index.html">홈</a><svg data-lucide="chevron-right"></svg>
+    <a href="../../index.html#calculators">계산기</a><svg data-lucide="chevron-right"></svg>
+    <span>프리랜서 3.3% 환급 계산기</span>
+  </nav>
+
+  <div class="page-head">
+    <div>
+      <h1>프리랜서 3.3% 환급 계산기</h1>
+      <p class="lead">3.3%는 미리 낸 세금입니다. 종합소득세 신고로 최종 세액이 확정되는데, 직전연도 수입에 따라 경비율 방식이 갈리면서 결과가 크게 달라집니다.</p>
+    </div>
+    <a class="btn btn-ghost" href="../../index.html#calculators">다른 계산기 보기 <svg data-lucide="arrow-right"></svg></a>
+  </div>
+
+  <div id="calc-mount"></div>
+
+  <section class="content-sections">
+    <h2 class="ctitle">3.3% 환급, 더 알아보기</h2>
+    <p class="csub">환급 여부를 가르는 것은 수입이 아니라 경비율 방식입니다.</p>
+
+    <div class="card csec">
+      <h3><span class="n">1</span> 3.3%는 세금을 미리 낸 것입니다</h3>
+      <p>인적용역 사업소득에 원천징수되는 3.3%는 <strong>소득세 3%와 지방소득세 0.3%</strong>를 합한 금액입니다. 확정된 세금이 아니라 미리 낸 금액입니다.</p>
+      <p>다음 해 5월 종합소득세 신고로 최종 세액이 확정되고, 이미 낸 3.3%와 비교해 <strong>적으면 환급, 많으면 추가 납부</strong>가 됩니다.</p>
+      <p>비교할 때 주의할 점이 있습니다. 3.3%에 지방소득세가 포함되어 있으므로, 최종 세액도 <strong>종합소득세 + 지방소득세(종합소득세의 10%)</strong>로 계산해야 같은 기준이 됩니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">2</span> 직전연도 수입이 결과를 가릅니다</h3>
+      <p>이 계산기가 <strong>직전연도 수입을 묻는 이유</strong>입니다. 경비를 얼마나 인정받는지가 여기서 갈립니다.</p>
+      <ul class="bullets">
+        <li>직전연도 인적용역 수입 <strong>3,600만 원 미만</strong> <em>그리고</em> 당해연도 수입 <strong>7,500만 원 미만</strong> → 단순경비율</li>
+        <li>하나라도 초과 → 기준경비율</li>
+      </ul>
+      <p>차이가 얼마나 클까요? 컴퓨터프로그래머 등 업종에서 당해연도 5,000만 원을 벌었다면 이렇게 갈립니다.</p>
+      <ul class="bullets">
+        <li>단순경비율 — 경비 3,061만 원 인정 → 환급 쪽</li>
+        <li>기준경비율 — 경비 870만 원 인정 → 추가 납부 쪽</li>
+      </ul>
+      <p>같은 수입인데 세금이 수백만 원 차이납니다. 직전연도 수입을 모르면 어느 쪽인지 알 수 없습니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">3</span> 단순경비율은 4,000만 원에서 한 번 꺾입니다</h3>
+      <p>단순경비율은 수입 전체에 같은 비율을 적용하지 않습니다. <strong>4,000만 원까지는 기본율, 초과분에는 더 낮은 초과율</strong>이 적용됩니다.</p>
+      <table class="mini-table">
+        <thead><tr><th>업종</th><th style="text-align:right">기본율</th><th style="text-align:right">4천만 초과율</th><th style="text-align:right">기준경비율</th></tr></thead>
+        <tbody>
+          <tr><td>작가</td><td style="text-align:right">58.7%</td><td style="text-align:right">42.2%</td><td style="text-align:right">7.2%</td></tr>
+          <tr><td>학원강사</td><td style="text-align:right">61.7%</td><td style="text-align:right">46.4%</td><td style="text-align:right">15.4%</td></tr>
+          <tr><td>개발자·기타 인적용역</td><td style="text-align:right">64.1%</td><td style="text-align:right">49.7%</td><td style="text-align:right">17.4%</td></tr>
+          <tr><td>학습지 방문강사</td><td style="text-align:right">75.0%</td><td style="text-align:right">65.0%</td><td style="text-align:right">31.5%</td></tr>
+          <tr><td>시각디자인</td><td style="text-align:right">78.8%</td><td style="text-align:right">—</td><td style="text-align:right">19.1%</td></tr>
+          <tr><td>배달라이더·퀵서비스</td><td style="text-align:right">79.4%</td><td style="text-align:right">71.2%</td><td style="text-align:right">19.8%</td></tr>
+        </tbody>
+      </table>
+      <p>개발자가 5,000만 원을 벌었다면 <code>4,000만 × 64.1% + 1,000만 × 49.7%</code>로 계산해 경비 3,061만 원이 인정됩니다. 전체에 64.1%를 곱하는 것과는 다른 값입니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">4</span> 업종마다 손익분기가 다릅니다</h3>
+      <p>경비율이 다르니 환급에서 추가 납부로 넘어가는 지점도 업종마다 다릅니다. 단순경비율이 적용되고 본인 기본공제만 있는 경우를 기준으로 보면, 경비율이 낮은 업종일수록 더 낮은 수입에서 추가 납부로 넘어갑니다.</p>
+      <p>계산기에 수입을 넣으면 해당 업종의 손익분기 수입액을 함께 알려줍니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">5</span> 이 계산은 방향 판단용입니다</h3>
+      <p>실제 환급액은 여기서 다루지 않는 요소에 따라 크게 달라집니다.</p>
+      <ul class="bullets">
+        <li>추가공제(경로우대·장애인 등)와 특별공제</li>
+        <li>세액공제(의료비·교육비·기부금 등)</li>
+        <li>근로소득 등 다른 소득과의 합산</li>
+        <li>기준경비율 적용 시 증빙 가능한 주요경비</li>
+        <li>국민연금 보험료 등 소득공제 항목</li>
+      </ul>
+      <p>그래서 이 계산기는 정확한 금액이 아니라 <strong>환급 가능성의 방향</strong>을 보여줍니다. 확정 금액은 종합소득세 신고에서만 알 수 있습니다.</p>
+    </div>
+
+    <div class="card csec faq">
+      <h3><span class="n">6</span> 자주 묻는 질문</h3>
+      <details open><summary><span class="q">Q</span> 3.3%를 떼면 무조건 돌려받나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아닙니다. 수입이 많거나 기준경비율이 적용되면 추가로 납부해야 할 수도 있습니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 직전연도 수입을 모릅니다.<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">모름을 선택하면 단순경비율과 기준경비율 두 시나리오를 모두 보여줍니다. 홈택스에서 지급명세서를 조회하면 확인할 수 있습니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 근로소득도 함께 있으면 어떻게 되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">모든 소득을 합산해 종합소득세를 계산하므로 세율 구간이 올라가 결과가 달라집니다. 이 계산기는 인적용역 사업소득만 있는 경우를 가정합니다.</div></details>
+
+      <details><summary><span class="q">Q</span> 입력값이 저장되나요?<span class="chev"><svg data-lucide="chevron-down"></svg></span></summary><div class="a">아니요. 모든 계산은 브라우저 안에서만 처리되며 저장되지 않습니다.</div></details>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">7</span> 주의사항</h3>
+      <p>기본공제만 반영하며 추가공제·특별공제·세액공제와 다른 소득과의 합산은 계산하지 않습니다. 기준경비율의 경우 증빙 가능한 주요경비가 있으면 결과가 달라집니다. 경비율은 국세청이 매년 고시하므로 신고 시점에 최신 기준을 확인하세요. 이 결과는 참고용이며 확정 세액이 아닙니다.</p>
+    </div>
+
+    <div class="card csec">
+      <h3><span class="n">8</span> 관련 계산기</h3>
+      <div class="related-grid">
+        <a class="rel-card" href="part-time-income-calculator.html"><span class="ico t-green"><svg data-lucide="wallet"></svg></span><span><span class="t">알바 실수령 계산기</span><br><span class="d">3.3% vs 4대보험</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="net-salary-calculator.html"><span class="ico t-navy"><svg data-lucide="banknote"></svg></span><span><span class="t">실수령액 계산기</span><br><span class="d">근로소득 기준</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+        <a class="rel-card" href="four-insurance-calculator.html"><span class="ico t-red"><svg data-lucide="shield-check"></svg></span><span><span class="t">4대보험 계산기</span><br><span class="d">보험별 공제액</span></span><span class="arr"><svg data-lucide="arrow-right"></svg></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="../../index.html"><span class="logo"><svg data-lucide="calculator"></svg></span><span class="name">급여계산소</span></a>
+        <p>급여와 노동 관련 계산을 법정 기준으로 확인하는 계산기 모음. 급여계산소는 사용자가 입력한 값을 서버에 저장하지 않습니다.</p>
+      </div>
+      <nav class="foot-links"><a href="../info/about.html">소개</a><a href="../policy/privacy-policy.html">개인정보처리방침</a><a href="../info/usage-guide.html">이용 안내</a><a href="../info/contact.html">문의하기</a></nav>
+    </div>
+    <div class="foot-bottom"><span class="copy">© 2026 급여계산소. All rights reserved.</span>
+      <div class="socials"><a href="../info/about.html" aria-label="소개"><svg data-lucide="rss"></svg></a><a href="../info/contact.html" aria-label="문의하기"><svg data-lucide="mail"></svg></a><a href="../info/usage-guide.html" aria-label="이용 안내"><svg data-lucide="share-2"></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="../../assets/js/calc-engine.js"></script>
+<script src="../../assets/js/labor-calc.js"></script>
+<script>
+const { won } = window.calcEngineUtils;          // 표시용 포맷터 (문자열 반환)
+const money = n => `${won(n)}원`;
+const flr = n => Math.floor(Number(n.toFixed(6)));   // 산술용 원 단위 절사
+
+LaborCalc.ready().then(init).catch(err => {
+  const el = document.getElementById('calc-mount');
+  if (el) el.innerHTML =
+    '<div class="card csec"><p>계산에 필요한 기준값을 불러오지 못했습니다. ' +
+    '잠시 후 새로고침해 주세요.</p></div>';
+  console.error(err);
+});
+
+function init() {
+const JOBS = LaborCalc.rates.years['2026'].freelance_refund['단순경비율']['업종'];
+const LABELS = JOBS.map(j => j.label);
+
+renderCalculator({
+  tip: '직전연도 수입이 3,600만 원 이상이면 기준경비율이 적용되어 세금이 크게 늘어납니다. 모르면 "모름"을 선택하세요.',
+  fields: [
+    { id:'job',        label:'업종', type:'seg', options: LABELS.slice(0, 3), value: LABELS[2] },
+    { id:'job2',       label:'업종 (계속)', type:'seg', options: LABELS.slice(3), value: '' },
+    { id:'income',     label:'당해연도 수입', type:'number', unit:'원', value:'50,000,000', highlight:true },
+    { id:'prev',       label:'직전연도 인적용역 수입', type:'seg', options:['3,600만 미만','3,600만 이상','모름'], value:'3,600만 미만' },
+    { id:'dependents', label:'부양가족 수 (본인 제외)', type:'number', unit:'명', value:'0' },
+  ],
+
+  compute(v) {
+    const label = LABELS.includes(v.job2) && v.job2 ? v.job2 : v.job;
+    const job = JOBS.find(j => j.label === label) || JOBS[2];
+
+    let prevIncome = null;
+    if (v.prev === '3,600만 미만') prevIncome = 20000000;
+    else if (v.prev === '3,600만 이상') prevIncome = 40000000;
+
+    const r = LaborCalc.freelanceRefund({
+      jobKey: job.key,
+      income: v.income,
+      prevYearIncome: prevIncome,
+      dependents: v.dependents
+    });
+
+    const known = r.canUseSimple !== null;
+    const main = r.chosen || r.simple;
+
+    // 손익분기 수입액 탐색 (단순경비율 기준)
+    let breakEven = null;
+    for (let inc = 5000000; inc <= 75000000; inc += 500000) {
+      const t = LaborCalc.freelanceRefund({
+        jobKey: job.key, income: inc, prevYearIncome: 10000000, dependents: v.dependents });
+      if (!t.simple.refund) { breakEven = inc; break; }
+    }
+
+    const rows = [
+      ['업종', `${job.name} (${job.code})`, '<span class="tag fixed">기준</span>', ''],
+      ['당해연도 수입', money(v.income), '', ''],
+      ['기납부세액 (3.3%)', money(r.prepaid), '<span class="tag fixed">기납부</span>',
+       '소득세 3% + 지방소득세 0.3%'],
+      ['기본공제', money(r.deduction), '',
+       `본인 150만 원 + 부양가족 ${v.dependents}명`],
+      ['— 단순경비율 —', '', '', ''],
+      ['인정 경비', money(r.simple.expense),
+       r.canUseSimple === true ? '<span class="tag fixed">적용</span>' : '',
+       v.income > 40000000
+         ? `4,000만 × ${(job.simple * 100).toFixed(1)}% + 초과분 × ${job.simple_over ? (job.simple_over * 100).toFixed(1) + '%' : '—'}`
+         : `수입 × ${(job.simple * 100).toFixed(1)}%`],
+      ['과세표준', money(r.simple.taxBase), '', '수입 − 경비 − 공제'],
+      ['최종 세액', money(r.simple.finalTax), '', '종합소득세 + 지방소득세 10%'],
+      ['차액', `${r.simple.diff >= 0 ? '+' : '−'}${money(Math.abs(r.simple.diff))}`,
+       r.simple.refund ? '<span class="tag fixed">환급</span>' : '<span class="tag warn">추가납부</span>', ''],
+      ['— 기준경비율 —', '', '', ''],
+      ['인정 경비', money(r.standard.expense),
+       r.canUseSimple === false ? '<span class="tag fixed">적용</span>' : '',
+       `수입 × ${(job.standard * 100).toFixed(1)}%`],
+      ['최종 세액', money(r.standard.finalTax), '', '종합소득세 + 지방소득세 10%'],
+      ['차액', `${r.standard.diff >= 0 ? '+' : '−'}${money(Math.abs(r.standard.diff))}`,
+       r.standard.refund ? '<span class="tag fixed">환급</span>' : '<span class="tag warn">추가납부</span>', ''],
+    ];
+
+    const checks = [];
+    if (known) {
+      checks.push(`${r.methodReason}가 적용됩니다.`);
+      const other = r.canUseSimple ? r.standard : r.simple;
+      const gap = Math.abs(main.finalTax - other.finalTax);
+      checks.push(`반대 방식이었다면 최종 세액이 ${money(other.finalTax)}으로 ${money(gap)} 차이납니다. 직전연도 수입 하나로 결과가 크게 갈립니다.`);
+    } else {
+      checks.push('직전연도 수입을 모르면 어느 방식이 적용될지 알 수 없어 두 시나리오를 모두 표시했습니다. 홈택스에서 지급명세서를 조회하면 확인할 수 있습니다.');
+      checks.push(`단순경비율이면 ${r.simple.refund ? '환급' : '추가납부'}, 기준경비율이면 ${r.standard.refund ? '환급' : '추가납부'} 쪽입니다.`);
+    }
+
+    if (v.income > 40000000 && job.simple_over) {
+      checks.push(`단순경비율은 4,000만 원까지 ${(job.simple * 100).toFixed(1)}%, 초과분에는 ${(job.simple_over * 100).toFixed(1)}%가 적용됩니다. 수입 전체에 같은 비율을 곱하는 것이 아닙니다.`);
+    }
+    if (breakEven) {
+      checks.push(`이 업종은 단순경비율 기준으로 수입이 약 ${money(breakEven)}을 넘으면 추가 납부 쪽으로 바뀝니다.`);
+    }
+    checks.push('3.3%에는 지방소득세가 포함되어 있으므로 최종 세액도 종합소득세에 지방소득세 10%를 더해 비교했습니다.');
+    checks.push(r.disclaimer);
+
+    return {
+      summary: [
+        { label:'기납부세액 (3.3%)', value: won(r.prepaid), unit:'원' },
+        { label:'예상 최종 세액', value: won(main.finalTax), unit:'원', tone:'orange' },
+        { label:'차액', value: won(Math.abs(main.diff)), unit:'원',
+          tone: main.refund ? 'green' : 'red' },
+        { label:'판정', value: known ? r.verdict : '직전연도 확인 필요', unit:'',
+          tone: main.refund ? 'green' : 'red' },
+      ],
+      chartItems: [
+        { label:'인정 경비', value: main.expense },
+        { label:'기본공제', value: r.deduction },
+        { label:'과세표준', value: main.taxBase },
+      ],
+      table: {
+        columns:[{label:'항목'},{label:'금액',r:true},{label:'구분'},{label:'설명'}],
+        rows: rows,
+        totalRow:[known ? `${main.method} 기준 판정` : '판정',
+                  known ? (main.refund ? `환급 예상 ${money(main.diff)}` : `추가납부 예상 ${money(-main.diff)}`) : '직전연도 수입 확인 필요',
+                  '', ''],
+      },
+      interpretLead: known
+        ? `${job.name} 업종, 수입 ${money(v.income)} 기준으로 ${main.method}이 적용되어 ${r.verdict}입니다.`
+        : `직전연도 수입에 따라 결과가 갈립니다. 단순경비율이면 최종 세액 ${money(r.simple.finalTax)}, 기준경비율이면 ${money(r.standard.finalTax)}입니다.`,
+      interpretChecks: checks,
+    };
+  },
+
+  summary: [
+    { label:'기납부세액 (3.3%)', value:'1,650,000', unit:'원' },
+    { label:'예상 최종 세액', value:'1,565,850', unit:'원', tone:'orange' },
+    { label:'차액', value:'84,150', unit:'원', tone:'green' },
+    { label:'판정', value:'환급 가능성 있음', unit:'', tone:'green' },
+  ],
+  chartTitle:'수입 구성', chartTotalLabel:'당해연도 수입',
+  chartItems:[
+    { label:'인정 경비', value:30610000 },
+    { label:'기본공제', value:1500000 },
+    { label:'과세표준', value:17890000 },
+  ],
+  tableTitle:'경비율 방식별 비교',
+  table:{
+    columns:[{label:'항목'},{label:'금액',r:true},{label:'구분'},{label:'설명'}],
+    rows:[
+      ['업종','컴퓨터프로그래머 등 (940909)','<span class="tag fixed">기준</span>',''],
+      ['당해연도 수입','50,000,000원','',''],
+      ['기납부세액 (3.3%)','1,650,000원','<span class="tag fixed">기납부</span>','소득세 3% + 지방소득세 0.3%'],
+      ['기본공제','1,500,000원','','본인 150만 원 + 부양가족 0명'],
+      ['— 단순경비율 —','','',''],
+      ['인정 경비','30,610,000원','<span class="tag fixed">적용</span>','4,000만 × 64.1% + 초과분 × 49.7%'],
+      ['과세표준','17,890,000원','','수입 − 경비 − 공제'],
+      ['최종 세액','1,565,850원','','종합소득세 + 지방소득세 10%'],
+      ['차액','+84,150원','<span class="tag fixed">환급</span>',''],
+      ['— 기준경비율 —','','',''],
+      ['인정 경비','8,700,000원','','수입 × 17.4%'],
+      ['최종 세액','5,181,000원','','종합소득세 + 지방소득세 10%'],
+      ['차액','−3,531,000원','<span class="tag warn">추가납부</span>',''],
+    ],
+    totalRow:['단순경비율 기준 판정','환급 예상 84,150원','',''],
+  },
+  interpretLead:'개발자 업종, 수입 5,000만 원 기준으로 단순경비율이 적용되어 환급 가능성이 있습니다.',
+  interpretChecks:[
+    '직전연도 수입이 3,600만 원 이상이면 기준경비율이 적용되어 세액이 크게 늘어납니다.',
+    '단순경비율은 4,000만 원까지 기본율, 초과분에는 더 낮은 초과율이 적용됩니다.',
+    '실제 환급액은 공제 항목과 다른 소득에 따라 달라집니다.',
+  ],
+  csvName:'프리랜서환급_결과.csv',
+});
+}
+</script>
+</body>
+</html>

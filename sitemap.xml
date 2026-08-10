@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://costcheck.kr/</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/living-alone-cost-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/moving-cost-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/rent-cost-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/annual-leave-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/four-insurance-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/freelancer-tax-refund-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/minimum-wage-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/net-salary-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/overtime-pay-calculator.html</loc></url>
   <url><loc>https://costcheck.kr/pages/calculators/part-time-income-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/used-item-price-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/emergency-fund-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/date-cost-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/pet-adoption-cost-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/calculators/baby-first-year-cost-calculator.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/policy/privacy-policy.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/severance-pay-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/calculators/weekly-holiday-pay-calculator.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/guide/freelance-vs-insurance.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/guide/index.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/guide/minimum-wage-net-pay.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/guide/overtime-allowance.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/guide/severance-annual-leave.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/guide/weekly-holiday-pay.html</loc></url>
   <url><loc>https://costcheck.kr/pages/info/about.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/info/guide.html</loc></url>
-  <url><loc>https://costcheck.kr/pages/info/faq.html</loc></url>
   <url><loc>https://costcheck.kr/pages/info/contact.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/info/faq.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/info/guide.html</loc></url>
   <url><loc>https://costcheck.kr/pages/info/usage-guide.html</loc></url>
+  <url><loc>https://costcheck.kr/pages/policy/privacy-policy.html</loc></url>
 </urlset>
