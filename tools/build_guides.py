@@ -23,11 +23,11 @@ ADSENSE = "ca-pub-4822493819381330"
 
 # 목록 순서와 요약 (index.html 생성용)
 ORDER = [
-    ("weekly-holiday-pay", "주휴수당, 얼마를 언제 받는지 한 번에 정리"),
-    ("freelance-vs-insurance", "3.3%와 4대보험, 무엇이 다르고 어느 쪽이 유리한가"),
-    ("minimum-wage-net-pay", "최저임금을 받으면 실수령액은 얼마인가"),
-    ("severance-annual-leave", "퇴직금과 연차수당, 계산이 헷갈리는 이유"),
-    ("overtime-allowance", "연장·야간·휴일수당, 언제 얼마가 붙나"),
+    ("weekly-holiday-pay", "4주 평균 판정과 실질 시급 20% 상승"),
+    ("freelance-vs-insurance", "보험별 가입 기준이 서로 다른 이유"),
+    ("minimum-wage-net-pay", "비과세와 부양가족이 만드는 차이"),
+    ("severance-annual-leave", "평균임금과 통상임금, 어느 쪽이 유리한가"),
+    ("overtime-allowance", "통상시급 환산과 중복 가산"),
 ]
 
 
